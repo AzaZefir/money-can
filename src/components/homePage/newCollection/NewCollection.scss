@@ -1,0 +1,23 @@
+.new-collection {
+  padding-bottom: 100px;
+  h2 {
+    text-align: center;
+  }
+  .newCollection-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .slick-prev:before {
+    content: url('./assets/images/homePageImg/arrL.svg');
+  }
+
+  .slick-next:before {
+    content: url('./assets/images/homePageImg/arrR.svg');
+  }
+}

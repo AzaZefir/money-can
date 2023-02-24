@@ -1,0 +1,38 @@
+.contuctUs {
+  background-color: #fff;
+  padding: 60px 0;
+  position: relative;
+  margin-bottom: 100px;
+  > div {
+    position: relative;
+    z-index: 1;
+    h2 {
+      margin-bottom: 70px;
+    }
+    p {
+      margin: 40px 0 100px 0;
+      font-size: 12px;
+      a {
+        strong {
+          color:  #258c93 !important;
+        }
+      }
+    }
+    input {
+      width: 360px;
+      height: 69px;
+      background: #ffffff;
+      box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      border: none;
+      outline: #fff;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+  }
+  .contuctUsBgImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
