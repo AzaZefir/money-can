@@ -24,7 +24,7 @@ export const Header = () => {
               <a href="">Фулфилмент</a>
             </li>
             <li>
-              <a href="">О нас</a>
+              <Link to="/aboutUsPage">О нас</Link>
             </li>
             <li>
               <a href="">Контакты</a>
