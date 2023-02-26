@@ -1,6 +1,6 @@
 import React from 'react';
-import departmentImg from '../../../assets/images/homePageImg/дизайн студия 3.png';
-import departmentImg1 from '../../../assets/images/homePageImg/производство 4.png';
+import departmentImg from '../../../assets/images/homePageImg/pexels-photo-4620624.jpeg';
+import departmentImg1 from '../../../assets/images/homePageImg/pexels-photo-4622215.webp';
 import departmentImg2 from '../../../assets/images/homePageImg/фуллфилмент 4.png';
 import departmentImg3 from '../../../assets/images/homePageImg/каталог 3.png';
 import { Button } from '../../common/button/Button';

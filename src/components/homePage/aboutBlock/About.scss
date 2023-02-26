@@ -1,10 +1,37 @@
-.about-block-bg{
+.about-block-bg {
   height: 700px;
-  background-image: url('./assets/images/homePageImg/pexels-max-rahubovskiy-7031842.jpg');
-  // background-color: #258c93
-  ;
+  background-image: url('./assets/images/homePageImg/8aedd29366b0f88a6951a2acf76d5176c01ff55c.jpg');
+  background-color: #258c93;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 100px ;
+  padding-top: 166px;
+  .slick-prev {
+    left: 40px;
+    width: 32px;
+    height: 69px;
+    // position: relative;
+    z-index: 4;
+  }
+  .slick-next {
+    right: 40px;
+    width: 32px;
+    height: 69px;
+  }
+  .slick-prev:before {
+    content: url('./assets/images/homePageImg/prevBtn.svg');
+    opacity: 1;
+  }
+  .slick-next:before {
+    content: url('./assets/images/homePageImg/nextBtn.svg');
+  }
+  .slick-slide {
+    > div {
+      > div {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+    }
+  }
 }
