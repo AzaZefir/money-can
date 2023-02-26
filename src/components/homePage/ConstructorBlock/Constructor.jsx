@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../../common/button/Button';
+import { Link } from 'react-router-dom';
 
 export const Constructor = () => {
   return (
@@ -10,7 +11,7 @@ export const Constructor = () => {
           сможете не только выбрать, собрать любой образ. Но и ощутить, насколько сильно мы
           заботимся о вашем удобстве и времени.
         </p>
-        <Button>перейти в конструктор</Button>
+        <Button to='constructor'>перейти в конструктор</Button>
       </div>
     </section>
   );

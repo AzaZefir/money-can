@@ -1,9 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
-export const Button = ({children}) => {
+export const Button = ({children,...props}) => {
   return (
-    <a className="button d-flex align-items-center justify-content-center" href="">
+    <Link {...props} className="button d-flex align-items-center justify-content-center" href="">
       {children}
-    </a>
+    </Link>
   );
 };

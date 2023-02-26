@@ -1,0 +1,121 @@
+.constructor {
+  padding-top: 150px;
+  .container {
+    display: flex;
+    .constructor__deps {
+      > div {
+        margin-bottom: 30px;
+      }
+      .constructor__deps__types {
+        display: flex;
+        > div {
+          > div {
+            width: 130px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            span {
+              width: 47px;
+              height: 47px;
+              border-radius: 50%;
+              background-color: antiquewhite;
+              margin-bottom: 10px;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+        .constructor__deps__colors {
+          .constructor__deps__colors_block {
+            height: 285px;
+            .red {
+              background-color: red;
+            }
+            .green {
+              background-color: green;
+            }
+            .yellow {
+              background-color: yellow;
+            }
+            .dark {
+              background-color: black;
+            }
+            .grey {
+              background-color: grey;
+            }
+            .violet {
+              background-color: violet;
+            }
+            .khaki {
+              background-color: khaki;
+            }
+            .orange {
+              background-color: orange;
+            }
+            .white {
+              background-color: white;
+            }
+          }
+        }
+      }
+      .constructor__items__count {
+        display: flex;
+        > div {
+          P {
+            font-size: 10px;
+          }
+          > div {
+            display: flex;
+            a {
+              width: 45px;
+              height: 45px;
+            }
+            span {
+              width: 90px;
+              height: 45px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-bottom: 1px solid;
+              border-top: 1px solid;
+            }
+          }
+        }
+      }
+      .constructor__items__price {
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: 10px;
+        }
+        > div {
+          display: flex;
+
+          > div {
+            display: flex;
+            > div:last-child {
+              display: flex;
+              flex-direction: column;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .constructor__btn {
+        display: flex;
+        gap: 10px;
+      }
+    }
+    h4 {
+      margin-right: 50px;
+      width: 100px;
+    }
+  }
+}
