@@ -12,7 +12,7 @@ export const Header = () => {
         <nav className="d-flex align-items-center">
           <ul className="d-flex align-items-center  justify-content-between w-100 p-0 m-0">
             <li>
-              <Link to="">Каталог</Link>
+              <Link to="/catalog">Каталог</Link>
             </li>
             <li>
               <a href="">Дизайн отдел</a>

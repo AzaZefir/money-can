@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from '../common/header/Header';
 import { About } from './aboutBlock/About';
 import { Constructor } from './ConstructorBlock/Constructor';
-import { ContuctUs } from './contucUs/ContuctUs';
+import { ContuctUs } from '../common/callUs/ContuctUs';
 import { DepartmentCards } from './departmentsCards/DepartmentCards';
 import { ImportantToUs } from './ImportantToUs/ImportantToUs';
 import { NewCollection } from './newCollection/NewCollection';

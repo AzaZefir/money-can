@@ -10,8 +10,11 @@
 @import './components/common/button/Button.scss';
 @import './components/common/footer/Footer.scss';
 @import './components/homePage/reviews/Reviews.scss';
-@import './components/homePage/contucUs/ContuctUs.scss';
+@import './components/common/callUs/ContuctUs.scss';
 @import './components/constructor/Constructor.scss';
+@import './components/catalog/Catalog.scss';
+@import './components/catalog/catalogFilter/CatalogFilter.scss';
+@import './components/catalog/catalogCards/CatalogCards.scss';
 
 a {
   font-weight: 500;
