@@ -3,6 +3,8 @@ import { ContuctUs } from '../common/callUs/ContuctUs';
 import { CatalogCards } from './catalogCards/CatalogCards';
 import { CatalogFilter } from './catalogFilter/CatalogFilter';
 import { CatalogSort } from './catalogSort/CatalogSort';
+import { Button } from './../common/button/Button';
+import { CatalogPagination } from './catalogPagination/CatalogPagination';
 
 export const Catalog = () => {
   return (
@@ -15,6 +17,7 @@ export const Catalog = () => {
         <CatalogFilter />
         <CatalogCards />
       </div>
+      <CatalogPagination/>
       <ContuctUs />
     </div>
   );
