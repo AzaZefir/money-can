@@ -7,7 +7,8 @@ import { DesignBossWorks } from './designBossWorks/DesignBossWorks';
 export const DesignBoss = () => {
   return (
     <section className="design-department__boss">
-      <div className="container">
+      <div className='design-dep__bg'>
+        <div className="container">
         <figure>
           <img src={bossSvg} alt="Руководитель отдела" title="Руководитель дизайн отдела" />
         </figure>
@@ -49,6 +50,8 @@ export const DesignBoss = () => {
           </p>
         </div>
       </div>
+      </div>
+      
       <DesignBossWorks/>
     </section>
   );

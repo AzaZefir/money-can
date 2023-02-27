@@ -1,37 +1,41 @@
 .design-department__boss {
   margin: 80px 0;
-  >div:first-child {
-    display: flex;
-    justify-content: space-between;
-    figure {
-      width: 30%;
-      img {
-        width: 100%;
-      }
-    }
+  .design-dep__bg{
+    background-color: #FFF;
+    padding: 50px 0;
     > div {
-      width: 60%;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      p {
-        > strong {
-          width: 213px;
-          display: inline-block;
-        }
-      }
-      p:nth-child(3) {
-        display: flex;
-      }
-      p:last-child {
-        position: relative;
+      justify-content: space-between;
+      figure {
+        width: 30%;
         img {
-          position: absolute;
+          width: 100%;
         }
-        img:first-child {
-          left: -18px;
-          top: -4px;
+      }
+      > div {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        p {
+          > strong {
+            width: 213px;
+            display: inline-block;
+          }
+        }
+        p:nth-child(3) {
+          display: flex;
+        }
+        p:last-child {
+          position: relative;
+          img {
+            position: absolute;
+          }
+          img:first-child {
+            left: -18px;
+            top: -4px;
+          }
         }
       }
     }
