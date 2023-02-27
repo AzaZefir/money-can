@@ -1,0 +1,22 @@
+.about-us-page__comand {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+      margin: 40px 0;
+    }
+    figure {
+      border-radius: 10px;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+        border-radius: inherit;
+      }
+    }
+  }
+}

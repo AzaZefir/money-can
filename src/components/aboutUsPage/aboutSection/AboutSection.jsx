@@ -1,7 +1,7 @@
 import React from 'react'
 import about1 from '../../../assets/images/aboutUsPage/about1.png'
 import about2 from '../../../assets/images/aboutUsPage/about2.png'
-import about3 from '../../../assets/images/aboutUsPage/about3.png'
+import about3 from '../../../assets/images/aboutUsPage/desingHeader.jpg'
 
 export const AboutSection = () => {
   return (
