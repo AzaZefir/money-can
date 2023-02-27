@@ -1,0 +1,32 @@
+.contuct-page__form {
+  background-color: #fff;
+  padding: 50px 0;
+  > div {
+    display: flex;
+    figure {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    form {
+      width: 50%;
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      input , textarea{
+        // width: 100%;
+        background: rgba(2, 76, 187, 0.05);
+        border-radius: 10px;
+        padding: 14px 16px;
+        border: none;
+        outline: none;
+        color: #757575;
+      }
+      a{
+        width: 100%;
+      }
+    }
+  }
+}

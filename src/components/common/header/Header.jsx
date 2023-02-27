@@ -27,7 +27,7 @@ export const Header = () => {
               <Link to="/aboutUsPage">О нас</Link>
             </li>
             <li>
-              <a href="">Контакты</a>
+              <Link to="/contuctPage">Контакты</Link>
             </li>
           </ul>
         </nav>
