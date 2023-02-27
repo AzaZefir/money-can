@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -16,6 +17,15 @@ export const Footer = () => {
             <ul>
               <a href="" className="active" disabled>
                 <li>Главная</li>
+              </a>
+              <Link to="/constructor">
+                <li>Конструктор</li>
+              </Link>
+              <a href="">
+                <li>Новая коллекция</li>
+              </a>
+              <a href="">
+                <li>Отзывы</li>
               </a>
             </ul>
             <ul>
@@ -39,13 +49,31 @@ export const Footer = () => {
               <a href="" className="active">
                 <li style={{ width: 42 }}>О нас</li>
               </a>
+              <a href="">
+                <li>Основатель</li>
+              </a>
+              <a href="">
+                <li>Команда</li>
+              </a>
+              <a href="">
+                <li>Дизайнер</li>
+              </a>
             </ul>
             <ul>
               <a href="" className="active">
                 <li>Контакты</li>
               </a>
               <a href="">
-                <li>hello@adi.com</li>
+                <li>Email</li>
+              </a>
+              <a href="">
+                <li>Telegram</li>
+              </a>
+              <a href="">
+                <li>Whatsapp</li>
+              </a>
+              <a href="">
+                <li>Facebook</li>
               </a>
             </ul>
           </nav>

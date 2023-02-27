@@ -29,6 +29,9 @@ export const Header = () => {
             <li>
               <Link to="/contuct">Контакты</Link>
             </li>
+            <li>
+              <Link to="/constructor">Конструктор</Link>
+            </li>
           </ul>
         </nav>
         <nav className="header__cart">
