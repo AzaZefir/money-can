@@ -1,0 +1,16 @@
+.design-department {
+  padding-top: 150px;
+  > .container {
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      figure {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+    }
+  }
+
+}
