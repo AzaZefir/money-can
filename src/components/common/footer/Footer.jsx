@@ -7,9 +7,10 @@ export const Footer = () => {
         <div className="row d-flex align-items-start justify-content-between">
           <nav className="footer__logo col d-flex align-items-start flex-column">
             <h2>LOGO</h2>
-            <p>© Все права защищены</p>
             <a href="">Политика конфиденциальности</a>
             <a href="">Публичная оферта</a>
+            <a href="">Условия сотрудничества</a>
+            <p>© Все права защищены</p>
           </nav>
           <nav className="col d-flex">
             <ul>

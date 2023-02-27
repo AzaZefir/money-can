@@ -15,24 +15,24 @@ export const Header = () => {
               <Link to="/catalog">Каталог</Link>
             </li>
             <li>
-              <Link to="/designPage">Дизайн отдел</Link>
+              <Link to="/design">Дизайн отдел</Link>
             </li>
             <li>
-              <a href="">Производство</a>
+              <Link to="/production">Производство</Link>
             </li>
             <li>
-              <a href="">Фулфилмент</a>
+              <Link to="fulfilment">Фулфилмент</Link>
             </li>
             <li>
-              <Link to="/aboutUsPage">О нас</Link>
+              <Link to="/about">О нас</Link>
             </li>
             <li>
-              <Link to="/contuctPage">Контакты</Link>
+              <Link to="/contuct">Контакты</Link>
             </li>
           </ul>
         </nav>
         <nav className="header__cart">
-          <Link to="/shoppingCart">
+          <Link to="/cart">
             <img src={cartSvg} alt="" />
           </Link>
         </nav>
