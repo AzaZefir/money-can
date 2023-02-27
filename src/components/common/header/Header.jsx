@@ -32,7 +32,9 @@ export const Header = () => {
           </ul>
         </nav>
         <nav className="header__cart">
-          <img src={cartSvg} alt="" />
+          <Link to="/shoppingCart">
+            <img src={cartSvg} alt="" />
+          </Link>
         </nav>
       </div>
     </header>
