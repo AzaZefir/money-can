@@ -144,4 +144,54 @@
       }
     }
   }
+  .cooperation__min{
+    padding: 80px 0;
+    position: relative;
+    margin: 80px 0;
+    &::after {
+      content: '';
+      background-image: url('./assets/images/cooperationImg/workBg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+      top: 0px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+    > div {
+      display: flex;
+      position: relative;
+      .cooperation__min_arrow{
+        position: absolute;
+        left: 31px;
+        top: 11px;
+      }
+      .cooperation__min_content{
+        > div {
+          display: flex;
+          align-items: center;
+          h4 {
+            margin: 0;
+            color: #258c93;
+          }
+          
+        }
+        img {
+          position: relative;
+          z-index: 1;
+        }
+        ol {
+          margin-left: -32px;
+          list-style-type: none;
+          img{
+
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
 }
