@@ -1,0 +1,103 @@
+.cooperation {
+  padding-top: 150px;
+  .cooperation__catalog_section {
+    position: relative;
+    &::after {
+      content: '';
+      background-image: url('./assets/images/cooperationImg/cooperationBg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+      top: -155px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+    h2 {
+      margin-bottom: 80px;
+    }
+    .cooperation__catalog {
+      display: flex;
+      position: relative;
+      padding-bottom: 80px;
+      margin-bottom: 80px;
+      .cooperation__catalog_arrow {
+        position: absolute;
+        left: 20px;
+        top: 50px;
+      }
+      .cooperation__catalog_block {
+        > div {
+          display: flex;
+          align-items: center;
+          h4 {
+            margin: 0;
+            color: #258c93;
+          }
+        }
+        strong {
+          color: #258c93;
+        }
+        img {
+          position: relative;
+          z-index: 1;
+        }
+        ol {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+  .cooperation-production {
+    padding-top: 80px;
+    position: relative;
+    &::after {
+      content: '';
+      background-image: url('./assets/images/cooperationImg/cooperationProductionBg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+      top: 0px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+    h2 {
+      margin-bottom: 80px;
+    }
+    > .container {
+      display: flex;
+      position: relative;
+      padding-bottom: 80px;
+      .cooperation__production_arrow {
+        position: absolute;
+        left: 31px;
+        top: 11px;
+      }
+      .cooperation__production_block {
+        > div {
+          display: flex;
+          align-items: center;
+          h4 {
+            margin: 0;
+            color: #258c93;
+          }
+        }
+        strong {
+          color: #258c93;
+        }
+        img {
+          position: relative;
+          z-index: 1;
+        }
+        ol {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+}

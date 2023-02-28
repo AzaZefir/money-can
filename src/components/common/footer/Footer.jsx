@@ -8,80 +8,80 @@ export const Footer = () => {
         <div className="row d-flex align-items-start justify-content-between">
           <nav className="footer__logo col d-flex align-items-start flex-column">
             <h2>LOGO</h2>
-            <a href="">Политика конфиденциальности</a>
-            <a href="">Публичная оферта</a>
-            <a href="">Условия сотрудничества</a>
+            <Link to="">Политика конфиденциальности</Link>
+            <Link to="">Публичная оферта</Link>
+            <Link to="/cooperation">Условия сотрудничества</Link>
             <p>© Все права защищены</p>
           </nav>
           <nav className="col d-flex">
             <ul>
-              <a href="" className="active" disabled>
+              <Link to="/" className="active" disabled>
                 <li>Главная</li>
-              </a>
+              </Link>
               <Link to="/constructor">
                 <li>Конструктор</li>
               </Link>
-              <a href="">
+              <Link to="">
                 <li>Новая коллекция</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Отзывы</li>
-              </a>
+              </Link>
             </ul>
             <ul>
-              <a href="" className="active">
+              <Link to="" className="active">
                 <li>Каталог</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Пальто</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Свитшоты</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Кардиганы</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Толстовки</li>
-              </a>
+              </Link>
             </ul>
             <ul>
-              <a href="" className="active">
+              <Link to="/about" className="active">
                 <li style={{ width: 42 }}>О нас</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Основатель</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Команда</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Дизайнер</li>
-              </a>
+              </Link>
             </ul>
             <ul>
-              <a href="" className="active">
+              <Link to="/contuct" className="active">
                 <li>Контакты</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Email</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Telegram</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Whatsapp</li>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="">
                 <li>Facebook</li>
-              </a>
+              </Link>
             </ul>
           </nav>
           <nav className="col">
             <ul>
-              <a href="">
+              <Link to="">
                 <li className="text-end">9550 S Eastern Ave ste 253-A102 Las Vegas NV 89123</li>
-              </a>
+              </Link>
             </ul>
           </nav>
         </div>

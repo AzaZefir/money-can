@@ -10,6 +10,7 @@ import { DesignDepPage } from './components/designDepPage/DesignDepPage';
 import { ContuctPage } from './components/contuctPage/ContuctPage';
 import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { ProductionPage } from './components/productionPage/ProductionPage';
+import { Cooperation } from './components/cooperationPage/Cooperation';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contuct" element={<ContuctPage />} />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/production" element={<ProductionPage />} />
+        <Route path="/cooperation" element={<Cooperation />} />
       </Routes>
       <Footer />
     </div>
