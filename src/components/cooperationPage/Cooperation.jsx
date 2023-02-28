@@ -1,6 +1,7 @@
 import React from 'react';
 import { CooperationCatalog } from './cooperationCatalog/CooperationCatalog';
 import { CooperationProduction } from './cooperationProduction/CooperationProduction';
+import { CooperationWork } from './cooperationWork/CooperationWork';
 
 export const Cooperation = () => {
   return (
@@ -13,7 +14,9 @@ export const Cooperation = () => {
         <CooperationProduction/>
       </section>
 
-      
+      <section className="how-we-work">
+        <CooperationWork/>
+      </section>
     </section>
   );
 };

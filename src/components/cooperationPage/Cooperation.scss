@@ -66,9 +66,6 @@
       right: 0;
       position: absolute;
     }
-    h2 {
-      margin-bottom: 80px;
-    }
     > .container {
       display: flex;
       position: relative;
@@ -79,6 +76,53 @@
         top: 11px;
       }
       .cooperation__production_block {
+        > div {
+          display: flex;
+          align-items: center;
+          h4 {
+            margin: 0;
+            color: #258c93;
+          }
+        }
+        strong {
+          color: #258c93;
+        }
+        img {
+          position: relative;
+          z-index: 1;
+        }
+        ol {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+  .how-we-work {
+    padding: 80px 0;
+    position: relative;
+    margin: 80px 0;
+    &::after {
+      content: '';
+      background-image: url('./assets/images/cooperationImg/workBg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      z-index: -1;
+      top: 0px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+    > div {
+      display: flex;
+      position: relative;
+      .how-we-work__arrow {
+        position: absolute;
+        left: 31px;
+        top: 11px;
+      }
+      .how-we-work__content {
         > div {
           display: flex;
           align-items: center;
