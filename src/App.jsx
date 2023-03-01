@@ -11,15 +11,38 @@ import { ContuctPage } from './components/contuctPage/ContuctPage';
 import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { ProductionPage } from './components/productionPage/ProductionPage';
 import { Cooperation } from './components/cooperationPage/Cooperation';
-
+import { db } from './config/firebase';
+import { getDocs, collection } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
 function App() {
+  const [catalogItems, setCatalogItems] = useState([]);
+
+  const clothesCollectionRef = collection(db, 'catalogItems');
+
+  useEffect(() => {
+    const getCatalogItems = async () => {
+      try {
+        const data = await getDocs(clothesCollectionRef);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        // console.log(filteredData);
+        setCatalogItems(filteredData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getCatalogItems();
+  }, []);
+
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/constructor" element={<Constructor />} />
-        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog" element={<Catalog catalogItems={catalogItems}/>} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/design" element={<DesignDepPage />} />
         <Route path="/contuct" element={<ContuctPage />} />
