@@ -11,7 +11,7 @@ export const CooperationWork = () => {
       <div className='how-we-work__content'>
         <div>
           <img src={workSvg} alt="" />
-          <h4>КАК МЫ РАБОТАЕМ</h4>
+          <h4>Как мы работаем</h4>
         </div>
         <ol>
           <li>Согласование пошива по образцу</li>
