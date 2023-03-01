@@ -14,6 +14,7 @@ import { Cooperation } from './components/cooperationPage/Cooperation';
 import { db } from './config/firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 function App() {
   const [catalogItems, setCatalogItems] = useState([]);
 
@@ -49,6 +50,7 @@ function App() {
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/production" element={<ProductionPage />} />
         <Route path="/cooperation" element={<Cooperation />} />
+        <Route path="/fulfillment" element={<FulfillmentPage />} />
       </Routes>
       <Footer />
     </div>

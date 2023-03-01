@@ -21,7 +21,7 @@ export const Header = () => {
               <Link to="/production">Производство</Link>
             </li>
             <li>
-              <Link to="fulfilment">Фулфилмент</Link>
+              <Link to="fulfillment">Фулфилмент</Link>
             </li>
             <li>
               <Link to="/about">О нас</Link>
