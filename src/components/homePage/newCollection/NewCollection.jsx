@@ -12,6 +12,33 @@ export const NewCollection = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
   };
   return (
     <div className="new-collection container">
@@ -37,7 +64,7 @@ export const NewCollection = () => {
         </div>
       </Slider>
       <div className="newCollection-btn">
-        <Button>Перейти в каталог</Button>
+        <Button to='/catalog'>Перейти в каталог</Button>
       </div>
     </div>
   );

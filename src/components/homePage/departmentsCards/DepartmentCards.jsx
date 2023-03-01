@@ -14,10 +14,10 @@ export const DepartmentCards = () => {
           <img className="w-100 h-100" src={departmentImg} alt="" />
           <figcaption>
             <h2>
-              Дизайн <span>отдел</span>
+              Дизайн отдел
             </h2>
             <p class="icon-links">
-              <Button>Перейти в отдел</Button>
+              <Button to='/design'>Перейти в отдел</Button>
             </p>
             <p class="description">
               Заказать свой индивидуальный предмет одежды, в разных цветовых оттенках, из разных
@@ -38,7 +38,7 @@ export const DepartmentCards = () => {
               Производство
             </h2>
             <p class="icon-links">
-              <Button>Перейти в отдел</Button>
+              <Button to='/production'>Перейти в отдел</Button>
             </p>
             <p class="description">
               Заказать свой индивидуальный предмет одежды, в разных цветовых оттенках, из разных
@@ -57,7 +57,7 @@ export const DepartmentCards = () => {
               Фулфилмент
             </h2>
             <p class="icon-links">
-              <Button>Перейти в отдел</Button>
+              <Button to='fulfilment'>Перейти в отдел</Button>
             </p>
             <p class="description">
               Заказать свой индивидуальный предмет одежды, в разных цветовых оттенках, из разных
@@ -76,7 +76,7 @@ export const DepartmentCards = () => {
               Каталог
             </h2>
             <p class="icon-links">
-              <Button>Перейти в отдел</Button>
+              <Button to='/catalog'>Перейти в отдел</Button>
             </p>
             <p class="description">
               Заказать свой индивидуальный предмет одежды, в разных цветовых оттенках, из разных

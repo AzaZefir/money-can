@@ -76,7 +76,7 @@ export const ProductionPage = () => {
               </div>
               <div>
                 <Button>Забронировать</Button>
-                <Button>Под заказ</Button>
+                <Button>каталог производства</Button>
               </div>
             </div>
           </div>
