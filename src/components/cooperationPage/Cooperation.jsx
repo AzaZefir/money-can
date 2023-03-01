@@ -3,6 +3,10 @@ import { CooperationCatalog } from './cooperationCatalog/CooperationCatalog';
 import { CooperationProduction } from './cooperationProduction/CooperationProduction';
 import { CooperationWork } from './cooperationWork/CooperationWork';
 import { CooperationMinOrder } from './cooperationMinOrder/CooperationMinOrder';
+import { Button } from './../common/button/Button';
+import { ContuctUs } from './../common/callUs/ContuctUs';
+import { CooperationLimits } from './coomerationLimits/CooperationLimits';
+import { CooperationDelivery } from './cooperationDelivery/CooperationDelivery';
 
 export const Cooperation = () => {
   return (
@@ -24,22 +28,18 @@ export const Cooperation = () => {
       </section>
 
       <section className="cooperation__limits">
-        <div className="container">
-          <div>
-            <img src='' alt="" />
-          </div>
-          <div>
-            <div>
-              <img src="" alt="" />
-              <h4>СРОКИ</h4>
-            </div>
-            <ul>
-              <li>Раработка модели 2-3 дня</li>
-              <li>Срок пошива партии зависит от колличества и сложности работы</li>
-            </ul>
-          </div>
-        </div>
+        <CooperationLimits/>
       </section>
+
+      <section className="cooperation__delivery">
+        <CooperationDelivery/>
+      </section>
+
+      <div className='cooperation__arr_back'>
+        <Button>Вернуться назад</Button>
+      </div>
+
+      <ContuctUs/>
     </section>
   );
 };
