@@ -5,7 +5,7 @@ import { CooperationWork } from './cooperationWork/CooperationWork';
 import { CooperationMinOrder } from './cooperationMinOrder/CooperationMinOrder';
 import { Button } from './../common/button/Button';
 import { ContuctUs } from './../common/callUs/ContuctUs';
-import { CooperationLimits } from './coomerationLimits/CooperationLimits';
+import { CooperationLimits } from './cooperationLimits/CooperationLimits';
 import { CooperationDelivery } from './cooperationDelivery/CooperationDelivery';
 
 export const Cooperation = () => {
