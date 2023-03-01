@@ -1,5 +1,25 @@
 .design-department {
-  padding-top: 150px;
+  
+  .design__description{
+    position: relative; padding: 150px 0 50px;
+    &::after {
+      content: '';
+      background-image: url('./assets/images/designDepartment/designBg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+    p {
+      text-align: center;
+      margin-top: 80px;
+    }
+  }
   > .container {
     > div {
       display: flex;

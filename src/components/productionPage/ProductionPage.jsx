@@ -3,6 +3,7 @@ import designStars from './../../assets/images/designDepartment/designStars.svg'
 import prod1 from './../../assets/images/production/pexels-the-lazy-artist-gallery-1342609.jpg';
 import prod2 from './../../assets/images/production/pexels-angela-roma-7480096.jpg';
 import prod3 from './../../assets/images/production/pexels-cottonbro-studio-4622423.jpg';
+import starSvg from './../../assets/images/designDepartment/designStars.svg';
 import { Button } from './../common/button/Button';
 import { ContuctUs } from './../common/callUs/ContuctUs';
 
@@ -11,12 +12,7 @@ export const ProductionPage = () => {
     <section className="production">
       <section className="production__description">
         <div className="container">
-          <div>
-            <h2>Производство</h2>
-            <figure>
-              <img src={designStars} alt="Оценка отдела" title="оценка работы отдела" />
-            </figure>
-          </div>
+          <h2>Производство</h2>
           <p>
             Швейный цех является производственным подразделением, которое занимается пошивом одежды,
             используя ручную и машинную швейную технику. Обычно производство одежды начинается с
@@ -79,6 +75,9 @@ export const ProductionPage = () => {
                 <Button>каталог производства</Button>
               </div>
             </div>
+            <figure>
+              <img src={starSvg} alt="" />
+            </figure>
           </div>
         </div>
       </section>
@@ -129,6 +128,9 @@ export const ProductionPage = () => {
                 <Button>Под заказ</Button>
               </div>
             </div>
+            <figure>
+              <img src={starSvg} alt="" />
+            </figure>
           </div>
         </div>
       </section>
@@ -179,10 +181,13 @@ export const ProductionPage = () => {
                 <Button>Под заказ</Button>
               </div>
             </div>
+            <figure>
+              <img src={starSvg} alt="" />
+            </figure>
           </div>
         </div>
       </section>
-      <ContuctUs/>
+      <ContuctUs />
     </section>
   );
 };
