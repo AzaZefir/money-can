@@ -1,7 +1,5 @@
 import React from 'react';
-import revArrLSvg from '../../../assets/images/homePageImg/revArrL.svg';
 import revStartSvg from '../../../assets/images/homePageImg/revStars.svg';
-import revArrRSvg from '../../../assets/images/homePageImg/revArrR.svg';
 import Slider from 'react-slick';
 
 export const Reviews = () => {

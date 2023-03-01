@@ -11,7 +11,7 @@ export const AboutSection = () => {
               <img src={about1} alt="" />
             </div>
             <div>
-              <h5>Lorem ipsum</h5>
+              <h4>Lorem ipsum</h4>
               <p>
                 Lorem была основана в 2010-ом и стала одной из самых успешных компаний нашей страны.
                 Как и многие итальянские фирмы, Womazing остаётся семейной компанией, хотя ни один
@@ -27,7 +27,7 @@ export const AboutSection = () => {
               <img src={about2} alt="" />
             </div>
             <div>
-              <h5>Lorem ipsum</h5>
+              <h4>Lorem ipsum</h4>
               <p>
                 Lorem была основана в 2010-ом и стала одной из самых успешных компаний нашей страны.
                 Как и многие итальянские фирмы, Womazing остаётся семейной компанией, хотя ни один
@@ -43,7 +43,7 @@ export const AboutSection = () => {
               <img src={about3} alt="" />
             </div>
             <div>
-              <h5>Lorem ipsum</h5>
+              <h4>Lorem ipsum</h4>
               <p>
                 Lorem была основана в 2010-ом и стала одной из самых успешных компаний нашей страны.
                 Как и многие итальянские фирмы, Womazing остаётся семейной компанией, хотя ни один
