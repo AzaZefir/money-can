@@ -32,6 +32,9 @@ export const FulfillmentPage = () => {
                   <input type="checkbox" id="brak" /><label htmlFor="brak">Проверка на брак</label>
                 </div>
                 <div>
+                  <input type="checkbox" id="brak" /><label htmlFor="send">Отправка</label>
+                </div>
+                <div>
                   <input type="checkbox" id="clean" />
                   <label htmlFor="clean">Дополнительная чистка</label>
                 </div>
