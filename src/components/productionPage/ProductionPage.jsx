@@ -6,6 +6,7 @@ import prod3 from './../../assets/images/production/pexels-cottonbro-studio-4622
 import starSvg from './../../assets/images/designDepartment/designStars.svg';
 import { Button } from './../common/button/Button';
 import { ContuctUs } from './../common/callUs/ContuctUs';
+import { DesignBossWorks } from '../designDepPage/designBoss/designBossWorks/DesignBossWorks';
 
 export const ProductionPage = () => {
   return (
@@ -70,17 +71,19 @@ export const ProductionPage = () => {
                   </ul>
                 </p>
               </div>
-              <div>
-                <Button>Забронировать</Button>
-                <Button>каталог производства</Button>
-              </div>
+              <figure>
+                <img src={starSvg} alt="" />
+              </figure>
             </div>
-            <figure>
-              <img src={starSvg} alt="" />
-            </figure>
+            <div className='first-production_btn'>
+              <Button>Забронировать</Button>
+              <Button>Под заказ</Button>
+            </div>
           </div>
         </div>
+        <DesignBossWorks />
       </section>
+
       <section className="first-production">
         <div className="container">
           <figure>
@@ -123,17 +126,19 @@ export const ProductionPage = () => {
                   </ul>
                 </p>
               </div>
-              <div>
-                <Button>Забронировать</Button>
-                <Button>Под заказ</Button>
-              </div>
+              <figure>
+                <img src={starSvg} alt="" />
+              </figure>
             </div>
-            <figure>
-              <img src={starSvg} alt="" />
-            </figure>
+            <div className='first-production_btn'>
+              <Button>Забронировать</Button>
+              <Button>Под заказ</Button>
+            </div>
           </div>
         </div>
+        <DesignBossWorks />{' '}
       </section>
+
       <section className="first-production">
         <div className="container">
           <figure>
@@ -176,17 +181,19 @@ export const ProductionPage = () => {
                   </ul>
                 </p>
               </div>
-              <div>
-                <Button>Забронировать</Button>
-                <Button>Под заказ</Button>
-              </div>
+              <figure>
+                <img src={starSvg} alt="" />
+              </figure>
             </div>
-            <figure>
-              <img src={starSvg} alt="" />
-            </figure>
+            <div className='first-production_btn'>
+              <Button>Забронировать</Button>
+              <Button>Под заказ</Button>
+            </div>
           </div>
         </div>
+        <DesignBossWorks />
       </section>
+
       <ContuctUs />
     </section>
   );

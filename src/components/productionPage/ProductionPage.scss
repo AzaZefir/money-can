@@ -61,7 +61,13 @@
         > div:first-child {
           display: flex;
           justify-content: space-between;
+          flex-direction: column;
           width: 100%;
+        }
+        .first-production_btn {
+          margin: 20px 0;
+          display: flex;
+          gap: 10px;
         }
         p {
           display: flex;
@@ -70,9 +76,6 @@
           > strong {
             width: 213px;
           }
-        }
-        a {
-          margin-bottom: 20px;
         }
       }
     }

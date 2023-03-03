@@ -7,6 +7,7 @@ import item3 from '../../../../assets/images/designDepartment/pexels-los-muertos
 import item4 from '../../../../assets/images/designDepartment/pexels-nappy-3097438.jpg';
 import item5 from '../../../../assets/images/designDepartment/pexels-sachin-bharti-1631181.jpg';
 import item6 from '../../../../assets/images/designDepartment/pexels-anubhaw-anand-3756086.jpg';
+import { Link } from 'react-router-dom';
 
 export const DesignBossWorks = () => {
   const settings = {
@@ -19,34 +20,52 @@ export const DesignBossWorks = () => {
   return (
     <section className="design-boss__works">
       <div className="container">
-        <h4>Работы</h4>
+        <h4>Каталог</h4>
         <Slider className="design-boss__works__cards" {...settings}>
-          <div className='design-boss__works__card'>
-            <img src={item1} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item1} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item2} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item2} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item3} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item3} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item4} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item4} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item5} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item5} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item6} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item6} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item6} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item6} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item6} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item6} alt="" />
+            </Link>
           </div>
-          <div className='design-boss__works__card'>
-            <img src={item6} alt="" />
+          <div className="design-boss__works__card">
+            <Link to="/constructor">
+              <img src={item6} alt="" />
+            </Link>
           </div>
         </Slider>
       </div>

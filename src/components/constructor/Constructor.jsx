@@ -4,11 +4,51 @@ import constrModelSvg from '../../assets/images/constructor/constrModel.svg';
 import { Button } from './../common/button/Button';
 import plusSvg from '../../assets/images/constructor/plus.svg';
 import minusSvg from '../../assets/images/constructor/minus.svg';
+import Slider from 'react-slick';
+import addBtnSvg from './../../assets/images/catalogImg/cart-plus 1.svg';
+import slImg1 from './../../assets/images/designDepartment/pexels-anubhaw-anand-3756030.jpg';
 
 export const Constructor = () => {
+  const settings = {
+    infinite: true,
+    slidesToShow:1,
+    centerMode: true,
+    className: 'center',
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    beforeChange: function (currentSlide, nextSlide) {
+      console.log('before change', currentSlide, nextSlide);
+    },
+    afterChange: function (currentSlide) {
+      console.log('after change', currentSlide);
+    },
+  };
   return (
     <div className="constructor">
       <div className="container">
+        <div className="constructor__slider">
+          <Slider {...settings}>
+            <div className="constructor__slider_card">
+              <img src={slImg1} alt="" />
+            </div>
+            <div className="constructor__slider_card">
+              <img src={slImg1} alt="" />
+            </div>
+            <div className="constructor__slider_card">
+              <img src={slImg1} alt="" />
+            </div>
+            <div className="constructor__slider_card">
+              <img src={slImg1} alt="" />
+            </div>
+            <div className="constructor__slider_card">
+              <img src={slImg1} alt="" />
+            </div>
+            <div className="constructor__slider_card">
+              <img src={slImg1} alt="" />
+            </div>
+          </Slider>
+        </div>
         <div className="constructor__model">
           <img src={constrModelSvg} alt="" />
           <img src={constrEllipsSvg} alt="" />
@@ -106,7 +146,9 @@ export const Constructor = () => {
             </p>
           </div>
           <div className="constructor__btn">
-            <Button>Добавить в карзину</Button>
+            <Button>
+              <img src={addBtnSvg} alt="" />
+            </Button>
             <Button>Получить консультацию</Button>
           </div>
         </div>

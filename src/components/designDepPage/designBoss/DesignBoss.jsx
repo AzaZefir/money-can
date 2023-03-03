@@ -44,10 +44,10 @@ export const DesignBoss = () => {
             </figure>
             <Button>Связаться с менеджером</Button>
           </div>
-        </div>
+        </div><DesignBossWorks />
       </div>
 
-      <DesignBossWorks />
+      
     </section>
   );
 };
