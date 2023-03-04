@@ -44,10 +44,9 @@ export const DesignBoss = () => {
             </figure>
             <Button>Связаться с менеджером</Button>
           </div>
-        </div><DesignBossWorks />
+        </div>
+        <DesignBossWorks />
       </div>
-
-      
     </section>
   );
 };

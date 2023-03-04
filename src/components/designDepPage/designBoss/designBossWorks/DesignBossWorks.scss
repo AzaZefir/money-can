@@ -31,5 +31,15 @@
     .slick-next:before {
       content: url('./assets/images/homePageImg/revArrR.svg');
     }
+    .slick-next {
+      @media screen and (max-width: 768px) {
+        right: -2px;
+      }
+    }
+    .slick-prev {
+      @media screen and (max-width: 768px) {
+        left: -2px;
+      }
+    }
   }
 }
