@@ -2,6 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
   .catalog__card {
     position: relative;
     > div:first-child {
@@ -9,7 +12,7 @@
         width: 100%;
       }
     }
-    width: 350px;
+    width: 340px;
     background: #ffffff;
     box-shadow: 0px 10px 40px rgba(36, 54, 81, 0.15);
     border-radius: 10px;
