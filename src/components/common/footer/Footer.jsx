@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="footer ">
       <div className="container">
         <div className="row d-flex align-items-start justify-content-between">
-          <nav className="footer__logo col d-flex align-items-start flex-column">
+          <nav className="footer__logo col d-flex align-items-center flex-column align-items-sm-start flex-sm-column align-items-md-start flex-md-column align-items-lg-start flex-lg-column">
             <h2>LOGO</h2>
             <Link to="">Политика конфиденциальности</Link>
             <Link to="">Публичная оферта</Link>
@@ -14,7 +14,7 @@ export const Footer = () => {
             <p>© Все права защищены</p>
           </nav>
           <nav className="col d-flex">
-            <ul>
+            <ul className="d-none d-sm-none d-md-none d-lg-block">
               <Link to="/" className="active" disabled>
                 <li>Главная</li>
               </Link>
@@ -45,7 +45,7 @@ export const Footer = () => {
                 <li>Толстовки</li>
               </Link>
             </ul>
-            <ul>
+            <ul className="d-none d-sm-none d-md-none d-lg-block">
               <Link to="/about" className="active">
                 <li style={{ width: 42 }}>О нас</li>
               </Link>
@@ -80,7 +80,9 @@ export const Footer = () => {
           <nav className="col">
             <ul>
               <Link to="">
-                <li className="text-end">9550 S Eastern Ave ste 253-A102 Las Vegas NV 89123</li>
+                <li className="text-center text-sm-center text-md-center text-lg-end">
+                  9550 S Eastern Ave ste 253-A102 Las Vegas NV 89123
+                </li>
               </Link>
             </ul>
           </nav>

@@ -20,4 +20,26 @@
   .slick-next:before {
     content: url('./assets/images/homePageImg/arrR.svg');
   }
+  .slick-next {
+    @media screen and (max-width: 768px) {
+      right: 20px;
+    }
+  }
+  .slick-prev {
+    @media screen and (max-width: 768px) {
+      left: 20px;
+    }
+  }
+  .slick-slide {
+    > div {
+      > div {
+        img {
+          width: 100% !important;
+        }
+      }
+    }
+    @media screen and (width: 1200px) {
+      width: 400px !important;
+    }
+  }
 }

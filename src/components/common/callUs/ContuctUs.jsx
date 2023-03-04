@@ -7,12 +7,14 @@ export const ContuctUs = () => {
     <section className="contuctUs">
       <div className="container">
         <h2>Связаться с нами</h2>
-        <form action="" className="d-flex align-items-end justify-content-between">
-          <div className="d-flex flex-column">
+        <form
+          action=""
+          className="d-flex align-items-center flex-column justify-content-center align-items-sm-center flex-sm-column justify-content-sm-center align-items-md-center flex-md-column justify-md-content-center align-items-lg-end flex-lg-row justify-content-lg-between">
+          <div className=" d-flex flex-column ">
             <label htmlFor="">Имя</label>
             <input type="text" placeholder="Ваше имя" />
           </div>
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column  my-4 my-sm-4 my-md-0 my-lg-0">
             <label htmlFor="">Номер телефона</label>
             <input type="text" placeholder="+ 996" />
           </div>

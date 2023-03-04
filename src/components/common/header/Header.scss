@@ -4,13 +4,25 @@
   z-index: 10;
   width: 100%;
   height: 15vh;
-  // border-bottom: 1px solid #c6c6c6;
   color: #3c4151;
   background-color: #ffffffbd;
+  @media screen and (max-width: 576px) {
+    height: 9vh;
+
+   }  
   div {
     height: inherit;
+    .toggle__menu {
+      display: none;
+      @media screen and (max-width: 1200px) {
+        display: block;
+      }
+    }
     nav:nth-child(2) {
       width: 60%;
+      @media screen and (max-width: 1200px) {
+        display: none !important;
+      }
       a {
         color: #3c4151 !important;
         &:hover {
@@ -19,6 +31,7 @@
           padding-bottom: 4px;
         }
       }
+      
     }
     ul {
       list-style-type: none;
@@ -26,6 +39,21 @@
     .header__brand__logo,
     .header__cart {
       cursor: pointer;
+      display: flex;
+      >img{
+        width: 43px;
+        margin-right: 20px;
+        @media screen and (max-width: 576px) {
+          width: 25px;
+          padding-top: 5px;}
+      }
+      a{
+        >img{
+          @media screen and (max-width: 576px) {
+            width: 25px;
+           }  
+        }
+      }
     }
   }
 }

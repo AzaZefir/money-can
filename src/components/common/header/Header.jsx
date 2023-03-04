@@ -1,6 +1,7 @@
 import React from 'react';
 import cartSvg from '../../../assets/images/homePageImg/Cart 1.svg';
 import { Link } from 'react-router-dom';
+import toggleMenu from './../../../assets/images/homePageImg/toggle-menu.svg'
 
 export const Header = () => {
   return (
@@ -35,6 +36,7 @@ export const Header = () => {
           </ul>
         </nav>
         <nav className="header__cart">
+          <img className='toggle__menu' src={toggleMenu} alt="" />
           <Link to="/cart">
             <img src={cartSvg} alt="" />
           </Link>

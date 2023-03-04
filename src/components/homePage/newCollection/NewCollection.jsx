@@ -8,37 +8,37 @@ export const NewCollection = () => {
   const settings = {
     dots: true,
     infinite: true,
-    autoplay:true,
+    // autoplay:true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2
-          }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="new-collection container">
@@ -64,7 +64,7 @@ export const NewCollection = () => {
         </div>
       </Slider>
       <div className="newCollection-btn">
-        <Button to='/catalog'>Перейти в каталог</Button>
+        <Button to="/catalog">Перейти в каталог</Button>
       </div>
     </div>
   );

@@ -10,6 +10,16 @@
     h2 {
       margin: 35px 0;
     }
+    .slick-next {
+      @media screen and (max-width: 768px) {
+        right: -2px;
+      }
+    }
+    .slick-prev {
+      @media screen and (max-width: 768px) {
+        left: -2px;
+      }
+    }
     .slick-prev:before {
       content: url('./assets/images/homePageImg/revArrL.svg');
     }

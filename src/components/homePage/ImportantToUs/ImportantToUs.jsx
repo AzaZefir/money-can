@@ -8,7 +8,7 @@ export const ImportantToUs = () => {
     <section className="important-to-us-bg">
       <div className="container d-flex flex-column justify-content-between align-items-center py-5">
         <h2>Что для нас важно</h2>
-        <div className="important-to-us-cards row d-flex justify-content-between pt-5">
+        <div className="important-to-us-cards row d-flex justify-content-between flex-column flex-sm-column flex-md-column flex-lg-row pt-5">
           <div className="col  d-flex justify-content-between flex-column align-items-center">
             <img src={qualitySvg} alt="Качество" />
             <h4 className="important-to-us-text py-3">Качество</h4>
