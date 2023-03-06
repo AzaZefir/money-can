@@ -40,6 +40,9 @@ h2 {
   font-weight: 500;
   font-size: 35px;
   line-height: 40px;
+  @media screen and (max-width:768){
+    text-align: center !important;
+  }
 }
 h4 {
   font-weight: 600;
