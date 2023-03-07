@@ -3,8 +3,8 @@ import cartSvg from '../../../assets/images/homePageImg/Cart 1.svg';
 import { Link } from 'react-router-dom';
 import toggleMenu from './../../../assets/images/homePageImg/toggleMenu.svg';
 import closeMenu from './../../../assets/images/homePageImg/closeMenu.svg';
-import logoSvg from './../../../assets/images/homePageImg/money-can-low-resolution-logo-color-on-transparent-background.svg';
 // import logoSvg from './../../../assets/images/homePageImg/money-can-high-resolution-logo-color-on-transparent-background.svg';
+import logoSvg from './../../../assets/images/homePageImg/money-can-low-resolution-logo-color-on-transparent-background.svg';
 import { navsLinks } from '../../constants';
 
 export const Header = () => {
@@ -52,12 +52,10 @@ export const Header = () => {
                   <Link
                     to={link.id}
                     className={`${active === link.title ? 'links-lightBlue' : ''}`}
-                    onClick={() =>
-                    {
-                      setToggle(!toggle)
-                      setActive(link.title)}
-
-                    } >
+                    onClick={() => {
+                      setToggle(!toggle);
+                      setActive(link.title);
+                    }}>
                     {link.title}
                   </Link>
                 </li>

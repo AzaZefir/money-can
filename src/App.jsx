@@ -15,6 +15,7 @@ import { db } from './config/firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
+import ContactLinks from './components/common/contactLinks/ContactLinks';
 function App() {
   const [catalogItems, setCatalogItems] = useState([]);
 
@@ -40,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ContactLinks/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/constructor" element={<Constructor />} />

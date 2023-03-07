@@ -86,9 +86,15 @@
       a {
         > img {
           @media screen and (max-width: 576px) {
-            width: 25px;
+            width: 31px;
           }
         }
+      }
+    }
+    .header__brand__logo{
+      img{
+        @media screen and (max-width: 576px) {
+          width: 80px !important;}
       }
     }
   }

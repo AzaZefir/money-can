@@ -1,9 +1,6 @@
-import React from 'react'
-import aboutSliderImg from '../../../assets/images/homePageImg/3dSlider.png'
-import prevBtn from '../../../assets/images/homePageImg/prevBtn.svg'
-import nextBtn from '../../../assets/images/homePageImg/nextBtn.svg'
+import React from 'react';
 import Slider from 'react-slick';
-
+import aboutSliderImg from './../../../assets/images/homePageImg/3dSlider.png'
 
 export const About = () => {
   const settings = {
@@ -15,36 +12,27 @@ export const About = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className='about-block-bg' >
-       <Slider className="slider" {...settings}>
+    <div className="about-block-bg">
+      <Slider className="slider" {...settings}>
         <div>
-        <img className='w-30' src={aboutSliderImg} alt="" />
-
+          <img className='w-30' src={aboutSliderImg} alt="" />
         </div>
         <div>
-        <img className='w-30' src={aboutSliderImg} alt="" />
-
+          <img className='w-30' src={aboutSliderImg} alt="" />
         </div>
         <div>
-        <img className='w-30' src={aboutSliderImg} alt="" />
-
+          <img className='w-30' src={aboutSliderImg} alt="" />
         </div>
         <div>
-        <img className='w-30' src={aboutSliderImg} alt="" />
-
+          <img className='w-30' src={aboutSliderImg} alt="" />
         </div>
         <div>
-        <img className='w-30' src={aboutSliderImg} alt="" />
-
+          <img className='w-30' src={aboutSliderImg} alt="" />
         </div>
         <div>
-        <img className='w-30' src={aboutSliderImg} alt="" />
-
+          <img className='w-30' src={aboutSliderImg} alt="" />
         </div>
       </Slider>
-      {/* <img src={prevBtn} alt="" />
-      <img className='w-25' src={aboutSliderImg} alt="" />
-      <img src={nextBtn} alt="" /> */}
     </div>
-  )
-}
+  );
+};

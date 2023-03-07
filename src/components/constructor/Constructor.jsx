@@ -7,11 +7,12 @@ import minusSvg from '../../assets/images/constructor/minus.svg';
 import Slider from 'react-slick';
 import addBtnSvg from './../../assets/images/catalogImg/cart-plus 1.svg';
 import slImg1 from './../../assets/images/designDepartment/pexels-anubhaw-anand-3756030.jpg';
+import { DummyCanvas } from './../three/dummyCanvas/three';
 
 export const Constructor = () => {
   const settings = {
     infinite: true,
-    slidesToShow:1,
+    slidesToShow: 1,
     centerMode: true,
     className: 'center',
     slidesToScroll: 1,
@@ -50,7 +51,7 @@ export const Constructor = () => {
           </Slider>
         </div>
         <div className="constructor__model">
-          <img src={constrModelSvg} alt="" />
+          <DummyCanvas />
           <img src={constrEllipsSvg} alt="" />
         </div>
         <div className="constructor__deps">

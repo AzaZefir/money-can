@@ -144,7 +144,6 @@
             > div {
               .constructor__slider_card {
                 border-radius: 10px;
-                // filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
                 overflow: hidden;
                 img {
                   width: 100%;
@@ -162,6 +161,12 @@
             top: 10px;
           }
         }
+      }
+    }
+    .constructor__model{
+      >img:last-child{
+        position: relative;
+        bottom: 105px;
       }
     }
   }

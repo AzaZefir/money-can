@@ -1,5 +1,6 @@
 import React from 'react';
-import contuctImg from '../../../assets/images/contuctUsimg/contucUs.png'
+// import contuctImg from '../../../assets/images/contuctUsimg/contucUs.png'
+import PlanetCanvas from '../../three/planetCanvas/PlanetCanvas';
 import { Button } from './../../common/button/Button';
 
 
@@ -7,7 +8,8 @@ export const ContucForm = () => {
   return (
     <div className="container">
       <figure>
-        <img src={contuctImg} alt="" />
+        {/* <img src={contuctImg} alt="" /> */}
+        <PlanetCanvas/>
       </figure>
       <form action="">
         <h4>Оставить заявку</h4>

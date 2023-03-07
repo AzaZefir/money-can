@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoSvg from '../../../assets/images/homePageImg/money-can-low-resolution-logo-color-on-transparent-background.svg'
 
 export const Footer = () => {
   return (
@@ -7,7 +8,7 @@ export const Footer = () => {
       <div className="container">
         <div className="row d-flex align-items-start justify-content-between">
           <nav className="footer__logo col d-flex align-items-center flex-column align-items-sm-start flex-sm-column align-items-md-start flex-md-column align-items-lg-start flex-lg-column">
-            <h2>LOGO</h2>
+            <Link to="/"><img src={logoSvg} alt="logo" width={170}/></Link>
             <Link to="">Политика конфиденциальности</Link>
             <Link to="">Публичная оферта</Link>
             <Link to="/cooperation">Условия сотрудничества</Link>
