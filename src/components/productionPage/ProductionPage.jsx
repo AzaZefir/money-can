@@ -75,9 +75,8 @@ export const ProductionPage = () => {
                 <img src={starSvg} alt="" />
               </figure>
             </div>
-            <div className='first-production_btn'>
-              <Button>Забронировать</Button>
-              <Button>Под заказ</Button>
+            <div className="first-production_btn">
+              <Button>Просмотреть каталог</Button> <Button>Забронировать</Button>
             </div>
           </div>
         </div>
@@ -130,9 +129,8 @@ export const ProductionPage = () => {
                 <img src={starSvg} alt="" />
               </figure>
             </div>
-            <div className='first-production_btn'>
-              <Button>Забронировать</Button>
-              <Button>Под заказ</Button>
+            <div className="first-production_btn">
+              <Button>Просмотреть каталог</Button> <Button>Забронировать</Button>
             </div>
           </div>
         </div>
@@ -185,9 +183,9 @@ export const ProductionPage = () => {
                 <img src={starSvg} alt="" />
               </figure>
             </div>
-            <div className='first-production_btn'>
+            <div className="first-production_btn">
+              <Button>Просмотреть каталог</Button>
               <Button>Забронировать</Button>
-              <Button>Под заказ</Button>
             </div>
           </div>
         </div>

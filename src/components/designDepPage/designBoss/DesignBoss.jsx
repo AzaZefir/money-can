@@ -42,7 +42,10 @@ export const DesignBoss = () => {
             <figure>
               <img src={starSvg} alt="" />
             </figure>
-            <Button>Связаться с менеджером</Button>
+            <div className='d-flex gap-2'>
+              <Button>Просмотреть каталог</Button>
+              <Button>Связаться с менеджером</Button>
+            </div>
           </div>
         </div>
         <DesignBossWorks />

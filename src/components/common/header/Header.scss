@@ -52,7 +52,7 @@
       }
     }
     nav:nth-child(2) {
-      width: 60%;
+      width: 70%;
       @media screen and (max-width: 1200px) {
         display: none !important;
       }
@@ -91,10 +91,11 @@
         }
       }
     }
-    .header__brand__logo{
-      img{
+    .header__brand__logo {
+      img {
         @media screen and (max-width: 576px) {
-          width: 80px !important;}
+          width: 80px !important;
+        }
       }
     }
   }
