@@ -12,7 +12,7 @@ import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { ProductionPage } from './components/productionPage/ProductionPage';
 import { Cooperation } from './components/cooperationPage/Cooperation';
 import { db } from './config/firebase';
-import { getDocs, collection } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 import ContactLinks from './components/common/contactLinks/ContactLinks';
@@ -20,19 +20,38 @@ import { NotFound } from './components/common/notFound/NotFound';
 function App() {
   const [catalogItems, setCatalogItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState('');
+  const [filteredCategory, setFilteredCategory] = useState([]);
 
   const clothesCollectionRef = collection(db, 'catalogItems');
 
+
+  // filter category items
+  const filterPizzas = (el) => {
+    if (el === '') {
+      setCatalogItems(filteredCategory);
+      return;
+    }
+    const result = filteredCategory.filter((item) => {
+      return item.category === el;
+    });
+    setCatalogItems(result);
+    console.log(result);
+  };
+
+  // add: order by category desc
   useEffect(() => {
+    setIsLoading(true);
     const getCatalogItems = async () => {
       try {
-        const data = await getDocs(clothesCollectionRef);
+        const data = await getDocs(query(clothesCollectionRef, orderBy('category', 'desc')));
         const filteredData = data.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
         }));
         // console.log(filteredData);
         setCatalogItems(filteredData);
+        setFilteredCategory(filteredData);
         setIsLoading(false);
       } catch (err) {
         console.log(err);
@@ -50,7 +69,15 @@ function App() {
         <Route path="/constructor" element={<Constructor />} />
         <Route
           path="/catalog"
-          element={<Catalog catalogItems={catalogItems} isLoading={isLoading} />}
+          element={
+            <Catalog
+              catalogItems={catalogItems}
+              isLoading={isLoading}
+              activeCategory={activeCategory}
+              setActiveCategory={setActiveCategory}
+              filterPizzas={filterPizzas}
+            />
+          }
         />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/design" element={<DesignDepPage />} />

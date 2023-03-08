@@ -6,14 +6,24 @@ import { CatalogSort } from './catalogSort/CatalogSort';
 import { Button } from './../common/button/Button';
 import { CatalogPagination } from './catalogPagination/CatalogPagination';
 
-export const Catalog = ({ catalogItems, isLoading }) => {
+export const Catalog = ({
+  catalogItems,
+  isLoading,
+  activeCategory,
+  setActiveCategory,
+  filterPizzas,
+}) => {
   return (
     <div className="catalog">
       <div className="container">
         <div className="catalog__sort">
           <h2>Каталог</h2>
         </div>
-        <CatalogFilter />
+        <CatalogFilter
+          activeCategory={activeCategory}
+          setActiveCategory={setActiveCategory}
+          filterPizzas={filterPizzas}
+        />
         <CatalogCards catalogItems={catalogItems} isLoading={isLoading} />
       </div>
       <CatalogPagination />
