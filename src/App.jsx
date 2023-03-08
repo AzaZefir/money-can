@@ -25,7 +25,6 @@ function App() {
 
   const clothesCollectionRef = collection(db, 'catalogItems');
 
-
   // filter category items
   const filterPizzas = (el) => {
     if (el === '') {
