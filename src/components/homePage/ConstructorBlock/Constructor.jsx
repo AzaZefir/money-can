@@ -11,7 +11,7 @@ export const Constructor = () => {
           сможете не только выбрать, собрать любой образ. Но и ощутить, насколько сильно мы
           заботимся о вашем удобстве и времени.
         </p>
-        <Button to='constructor'>перейти в конструктор</Button>
+        <Button className='button--outline'>перейти в конструктор</Button>
       </div>
     </section>
   );

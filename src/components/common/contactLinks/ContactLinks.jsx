@@ -7,8 +7,8 @@ import { BallCanvas } from './../../three/ballCanvas/BallCanvas';
 const ContactLinks = () => {
   return (
     <div className='contact-links'>
-      {contactLinksData.map((link)=>
-        <div>
+      {contactLinksData.map((link,index)=>
+        <div key={index}>
           <BallCanvas icon={link.icon}/>
         </div>
         )}

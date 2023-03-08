@@ -18,7 +18,7 @@ export const ComandSection = () => {
         <figure>
           <img src={comandSvg} alt="Наша команда" title='Наша команда'/>
         </figure>
-        <Button>Перейти в каталог</Button>
+        <Button to='/cooperation'>Условия сотрудничества</Button>
       </div>
     </section>
   );

@@ -1,21 +1,80 @@
+// .catalog__category__filter {
+//   // display: inline-block;
+//   padding: 100px 0 10px;
+//   margin-bottom: 100px;
+//   overflow-x: auto;
+//   white-space: nowrap;
+//   @media screen and (max-width: 768px) {
+//     padding: 50px 0 50px;
+//     margin-bottom: 50px;
+//   }
+//   a {
+//     display: inline-block !important;
+//     text-align: center;
+//     width: 140px;
+//     height: 50px;
+//     padding-top: 11px;
+//     margin-right: 10px;
+//   }
+//   ul{
+//     list-style: none;
+//   }
+//   .active{
+//     background-color: #113e41;
+//   }
+// }
+
 .catalog__category__filter {
-  // display: inline-block;
+  flex: 1;
+  max-width: 100%;
+  overflow-x: scroll;
   padding: 100px 0 10px;
-  margin-bottom: 100px;
-  overflow-x: auto;
-  white-space: nowrap;
-  @media screen and (max-width: 768px) {
+    margin-bottom: 100px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.catalog__category__filter::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+@media (max-width: 768px) {
+  .catalog__category__filter {
+    max-width: 100%;
+    margin-bottom: 30px;
     padding: 50px 0 50px;
-    margin-bottom: 50px;
+        margin-bottom: 50px;
   }
-  a {
-    display: inline-block !important;
-    text-align: center;
-    width: 140px;
-    height: 50px;
-    padding-top: 11px;
-    margin-right: 10px;
-  }
+}
+.catalog__category__filter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+.catalog__category__filter ul li {
+  background-color: #e6e6e6;
+  padding: 13px 30px;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.catalog__category__filter ul li:hover {
+  background-color: #b5b2b2;
+  color: #258c93;
+}
+.catalog__category__filter ul li:active {
+  background-color: #ececec;
+}
+.catalog__category__filter ul li.active {
+  background-color: #258c93;
+  color: #fff;
 }
 #style__scroll::-webkit-scrollbar {
   height: 3px;

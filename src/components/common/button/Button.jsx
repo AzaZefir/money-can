@@ -8,3 +8,14 @@ export const Button = ({children,...props}) => {
     </Link>
   );
 };
+// import React from 'react';
+
+// export const Button = ({ className,children,...props}) => {
+//   return (
+//     <button
+//     {...props}
+//       className={`${className} button`}>
+//       {children}
+//     </button>
+//   );
+// };

@@ -1,5 +1,4 @@
 import React from 'react';
-import designStars from '../../assets/images/designDepartment/designStars.svg';
 import { DesignBoss } from './designBoss/DesignBoss';
 import { Button } from './../common/button/Button';
 import { ContuctUs } from './../common/callUs/ContuctUs';
