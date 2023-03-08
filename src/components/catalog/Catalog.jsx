@@ -12,7 +12,6 @@ export const Catalog = ({catalogItems}) => {
       <div className="container">
         <div className="catalog__sort">
           <h2>Каталог</h2>
-          <CatalogSort />
         </div>
         <CatalogFilter />
         <CatalogCards catalogItems={catalogItems}/>

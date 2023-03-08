@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CatalogSort } from '../catalogSort/CatalogSort';
 
 export const categories = [
   'Все',
@@ -22,8 +23,8 @@ export const CatalogFilter = () => {
   };
 
   return (
-    <div className="catalog__category__filter" id="style__scroll">
-      <ul>
+    <div className="catalog__category__filter d-flex align-items-center">
+      <ul id="style__scroll">
         {categories.map((category, index) => (
           <li
             key={index}
@@ -33,6 +34,7 @@ export const CatalogFilter = () => {
           </li>
         ))}
       </ul>
+      <CatalogSort />
     </div>
   );
 };
