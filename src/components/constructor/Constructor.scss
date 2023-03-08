@@ -33,6 +33,9 @@
               &:hover {
                 transform: scale(1.2);
               }
+              img {
+                width: 100%;
+              }
             }
           }
         }
@@ -129,6 +132,9 @@
     .slick-next:before {
       content: url('./assets/images/homePageImg/revArrR.svg');
     }
+    .slick-next {
+      right: 10px;
+    }
     .constructor__slider {
       .slick-list {
         padding: 93px 0px !important;
@@ -163,8 +169,8 @@
         }
       }
     }
-    .constructor__model{
-      >img:last-child{
+    .constructor__model {
+      > img:last-child {
         position: relative;
         bottom: 105px;
       }

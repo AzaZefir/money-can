@@ -8,6 +8,39 @@ import Slider from 'react-slick';
 import addBtnSvg from './../../assets/images/catalogImg/cart-plus 1.svg';
 import slImg1 from './../../assets/images/designDepartment/pexels-anubhaw-anand-3756030.jpg';
 import { DummyCanvas } from './../three/dummyCanvas/three';
+import azurra from './../../assets/images/textile/azzurra.png';
+import bianco from './../../assets/images/textile/bianco.png';
+import nero from './../../assets/images/textile/nero.png';
+import bluette from './../../assets/images/textile/bluette.png';
+import fragoll from './../../assets/images/textile/fragola.png';
+import verdePrato from './../../assets/images/textile/verde_prato.png';
+
+const textiles = [
+  {
+    id: 1,
+    img: azurra,
+  },
+  {
+    id: 2,
+    img: bianco,
+  },
+  {
+    id: 3,
+    img: nero,
+  },
+  {
+    id: 4,
+    img: bluette,
+  },
+  {
+    id: 5,
+    img: fragoll,
+  },
+  {
+    id: 6,
+    img: verdePrato,
+  },
+];
 
 export const Constructor = () => {
   const settings = {
@@ -59,12 +92,11 @@ export const Constructor = () => {
             <div className="constructor__deps__textile">
               <h4>Ткань</h4>
               <div>
-                <span className="cotton"></span>
-                <span className="leather"></span>
-                <span className="sintetic"></span>
-                <span className="soft-leather"></span>
-                <span></span>
-                <span></span>
+                {textiles.map((textile) => (
+                  <span className="constructor__textile" key={textile.id}>
+                    <img src={textile.img} alt="Ткань" />
+                  </span>
+                ))}
               </div>
             </div>
             <div className="constructor__deps__colors">
