@@ -16,10 +16,10 @@ import { getDocs, collection } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 import ContactLinks from './components/common/contactLinks/ContactLinks';
+import { NotFound } from './components/common/notFound/NotFound';
 function App() {
   const [catalogItems, setCatalogItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
 
   const clothesCollectionRef = collection(db, 'catalogItems');
 
@@ -33,7 +33,7 @@ function App() {
         }));
         // console.log(filteredData);
         setCatalogItems(filteredData);
-        setIsLoading(false)
+        setIsLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -44,11 +44,14 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ContactLinks/>
+      <ContactLinks />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/constructor" element={<Constructor />} />
-        <Route path="/catalog" element={<Catalog catalogItems={catalogItems} isLoading={isLoading}/>} />
+        <Route
+          path="/catalog"
+          element={<Catalog catalogItems={catalogItems} isLoading={isLoading} />}
+        />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/design" element={<DesignDepPage />} />
         <Route path="/contact" element={<ContuctPage />} />
@@ -56,6 +59,7 @@ function App() {
         <Route path="/production" element={<ProductionPage />} />
         <Route path="/cooperation" element={<Cooperation />} />
         <Route path="/fulfillment" element={<FulfillmentPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
