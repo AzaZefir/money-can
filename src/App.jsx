@@ -18,6 +18,8 @@ import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 import ContactLinks from './components/common/contactLinks/ContactLinks';
 function App() {
   const [catalogItems, setCatalogItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
 
   const clothesCollectionRef = collection(db, 'catalogItems');
 
@@ -31,6 +33,7 @@ function App() {
         }));
         // console.log(filteredData);
         setCatalogItems(filteredData);
+        setIsLoading(false)
       } catch (err) {
         console.log(err);
       }
@@ -45,7 +48,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/constructor" element={<Constructor />} />
-        <Route path="/catalog" element={<Catalog catalogItems={catalogItems}/>} />
+        <Route path="/catalog" element={<Catalog catalogItems={catalogItems} isLoading={isLoading}/>} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/design" element={<DesignDepPage />} />
         <Route path="/contact" element={<ContuctPage />} />
