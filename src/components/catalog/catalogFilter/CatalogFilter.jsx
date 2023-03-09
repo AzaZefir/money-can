@@ -14,7 +14,15 @@ export const categories = [
   'Производство',
 ];
 
-export const CatalogFilter = ({ activeCategory, setActiveCategory, filterPizzas }) => {
+export const CatalogFilter = ({
+  activeCategory,
+  setActiveCategory,
+  filterPizzas,
+  catalogItems,
+  setCatalogItems,
+  activeSort,
+  setActiveSort,
+}) => {
   const selectCategory = (index) => {
     setActiveCategory(index);
     filterPizzas(index);
@@ -35,7 +43,7 @@ export const CatalogFilter = ({ activeCategory, setActiveCategory, filterPizzas 
           </li>
         ))}
       </ul>
-      <CatalogSort />
+      
     </div>
   );
 };

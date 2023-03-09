@@ -22,6 +22,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('');
   const [filteredCategory, setFilteredCategory] = useState([]);
+  const [activeSort, setActiveSort] = useState({
+    type: 'rating',
+  });
 
   const clothesCollectionRef = collection(db, 'catalogItems');
 
@@ -70,7 +73,10 @@ function App() {
           path="/catalog"
           element={
             <Catalog
+            activeSort={activeSort}
+              setActiveSort={setActiveSort}
               catalogItems={catalogItems}
+              setCatalogItems={setCatalogItems}
               isLoading={isLoading}
               activeCategory={activeCategory}
               setActiveCategory={setActiveCategory}

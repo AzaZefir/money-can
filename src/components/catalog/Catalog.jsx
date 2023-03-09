@@ -8,18 +8,31 @@ import { CatalogPagination } from './catalogPagination/CatalogPagination';
 
 export const Catalog = ({
   catalogItems,
+  setCatalogItems,
   isLoading,
   activeCategory,
   setActiveCategory,
   filterPizzas,
+  activeSort,
+  setActiveSort,
 }) => {
   return (
     <div className="catalog">
       <div className="container">
         <div className="catalog__sort">
           <h2>Каталог</h2>
+          <CatalogSort
+            catalogItems={catalogItems}
+            setCatalogItems={setCatalogItems}
+            activeSort={activeSort}
+            setActiveSort={setActiveSort}
+          />
         </div>
         <CatalogFilter
+          activeSort={activeSort}
+          setActiveSort={setActiveSort}
+          catalogItems={catalogItems}
+          setCatalogItems={setCatalogItems}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
           filterPizzas={filterPizzas}
