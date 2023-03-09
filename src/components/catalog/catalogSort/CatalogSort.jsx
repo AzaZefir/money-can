@@ -12,7 +12,7 @@ export const CatalogSort = ({ catalogItems, setCatalogItems, setActiveSort, acti
   ];
   const [isVisiblePopup, setIsVisiblePopup] = useState(false);
 
-  const activeLabel = sortItems.find((item) => item.type === activeSort.type).name;
+  // const activeLabel = sortItems.find((item) => item.type === activeSort.type).name;
 
   //!Сортировка каталога
   const onSortCatalog = (type) => {
@@ -31,18 +31,18 @@ export const CatalogSort = ({ catalogItems, setCatalogItems, setActiveSort, acti
   return (
     <div className="sort-popup">
       <p
-        className="d-flex align-items-center gap-2"
+        className="sort-popup__name d-flex align-items-center gap-2"
         onClick={() => setIsVisiblePopup(!isVisiblePopup)}>
         <IsVisiblePopup isVisiblePopup={isVisiblePopup} className="sort__lable" /> Сортировка по:
         &nbsp;
-        <strong>{activeLabel}</strong>
+        <strong>{activeSort.name}</strong>
       </p>
       {isVisiblePopup && (
         <div className="sort__popup">
           <ul className="d-flex flex-column align-items-start">
             {sortItems.map((obj, index) => (
               <li
-                className={activeSort.type === index ? 'active' : ''}
+                className={activeSort.type === obj.type ? 'active' : ''}
                 onClick={() => onSelectSortType(obj,index)}
                 key={`${obj.id}_${index}`}>
                 {obj.name}

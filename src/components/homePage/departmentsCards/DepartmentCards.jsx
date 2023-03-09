@@ -46,7 +46,7 @@ export const DepartmentCards = () => {
           <figcaption>
             <h2>Фулфилмент</h2>
             <p className="icon-links">
-              <Button to="fulfilment">Перейти в отдел</Button>
+              <Button to="/fulfillment">Перейти в отдел</Button>
             </p>
             <p className="description">
               Заказать свой индивидуальный предмет одежды, в разных цветовых оттенках, из разных

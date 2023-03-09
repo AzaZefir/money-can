@@ -23,6 +23,7 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('');
   const [filteredCategory, setFilteredCategory] = useState([]);
   const [activeSort, setActiveSort] = useState({
+    name:'популярности',
     type: 'rating',
   });
 
