@@ -13,7 +13,6 @@ import nero from './../../assets/images/textile/nero.png';
 import bluette from './../../assets/images/textile/bluette.png';
 import fragoll from './../../assets/images/textile/fragola.png';
 import verdePrato from './../../assets/images/textile/verde_prato.png';
-import './Constructor.scss'
 
 const textiles = [
   {
