@@ -1,6 +1,5 @@
 import React from 'react';
 import constrEllipsSvg from '../../assets/images/constructor/constrEllipse.svg';
-import constrModelSvg from '../../assets/images/constructor/constrModel.svg';
 import { Button } from './../common/button/Button';
 import plusSvg from '../../assets/images/constructor/plus.svg';
 import minusSvg from '../../assets/images/constructor/minus.svg';
@@ -14,6 +13,7 @@ import nero from './../../assets/images/textile/nero.png';
 import bluette from './../../assets/images/textile/bluette.png';
 import fragoll from './../../assets/images/textile/fragola.png';
 import verdePrato from './../../assets/images/textile/verde_prato.png';
+import './Constructor.scss'
 
 const textiles = [
   {
