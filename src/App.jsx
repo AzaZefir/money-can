@@ -17,9 +17,13 @@ import { useEffect, useState } from 'react';
 import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 import ContactLinks from './components/common/contactLinks/ContactLinks';
 import { NotFound } from './components/common/notFound/NotFound';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { setCategoryId } from './redux/slices/filterSlice';
 
 function App() {
+  //   const dispatch = useDispatch()
+  //   const categoryFilter = useSelector(state=> state.filter.categoryId)
+  // console.log(categoryFilter)
   const [catalogItems, setCatalogItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('');
@@ -35,6 +39,8 @@ function App() {
 
   // filter category items
   const filterPizzas = (el) => {
+    // dispatch(setCategoryId(id))
+
     if (el === '') {
       setCatalogItems(filteredCategory);
       return;
@@ -47,7 +53,7 @@ function App() {
   };
 
   const searchedCatalogItems = catalogItems.filter((item) => {
-    return !!(item.title.toLowerCase().includes(searchQuary.toLowerCase()));
+    return !!item.title.toLowerCase().includes(searchQuary.toLowerCase());
   });
 
   useEffect(() => {
@@ -61,7 +67,6 @@ function App() {
           ...doc.data(),
           id: doc.id,
         }));
-        // console.log(filteredData);
         setCatalogItems(filteredData);
         setFilteredCategory(filteredData);
         setIsLoading(false);
