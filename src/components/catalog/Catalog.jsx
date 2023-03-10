@@ -3,7 +3,6 @@ import { ContuctUs } from '../common/callUs/ContuctUs';
 import { CatalogCards } from './catalogCards/CatalogCards';
 import { CatalogFilter } from './catalogFilter/CatalogFilter';
 import { CatalogSort } from './catalogSort/CatalogSort';
-import { Button } from './../common/button/Button';
 import { CatalogPagination } from './catalogPagination/CatalogPagination';
 import { CatalogSearchInput } from './catalogSearch/CatalogSearchInput';
 
@@ -16,14 +15,18 @@ export const Catalog = ({
   filterPizzas,
   activeSort,
   setActiveSort,
+  searchQuary,
+  setSearchQuary,
+  searchedCatalogItems,
+  setCurrentPage,
 }) => {
   return (
     <div className="catalog">
       <div className="container">
         <div className="catalog__sort">
           <h2>Каталог</h2>
-          <div className='d-flex align-items-center'>
-            <CatalogSearchInput />
+          <div className="d-flex align-items-center">
+            <CatalogSearchInput searchQuary={searchQuary} setSearchQuary={setSearchQuary} />
             <CatalogSort
               catalogItems={catalogItems}
               setCatalogItems={setCatalogItems}
@@ -41,9 +44,13 @@ export const Catalog = ({
           setActiveCategory={setActiveCategory}
           filterPizzas={filterPizzas}
         />
-        <CatalogCards catalogItems={catalogItems} isLoading={isLoading} />
+        <CatalogCards
+          catalogItems={catalogItems}
+          isLoading={isLoading}
+          searchedCatalogItems={searchedCatalogItems}
+        />
       </div>
-      <CatalogPagination />
+      <CatalogPagination onChangePage={(num)=> setCurrentPage(num)} />
       <ContuctUs />
     </div>
   );

@@ -1,16 +1,19 @@
 import React from 'react';
-import { Button } from './../../common/button/Button';
-import paginArr from '../../../assets/images/catalogImg/paginationArr.svg';
+import ReactPaginate from 'react-paginate';
 
-export const CatalogPagination = () => {
+export const CatalogPagination = ({onChangePage}) => {
   return (
     <div className="catalog__pagination">
-      <Button>1</Button>
-      <Button>2</Button>
-      <Button>3</Button>
-      <Button>
-        <img src={paginArr} alt="" />
-      </Button>
+      <ReactPaginate
+        className="pagination"
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={(e)=> onChangePage(e.selected + 1)}
+        pageRangeDisplayed={3}
+        pageCount={2}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+      />
     </div>
   );
 };

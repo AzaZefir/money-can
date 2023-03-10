@@ -12,20 +12,24 @@ import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { ProductionPage } from './components/productionPage/ProductionPage';
 import { Cooperation } from './components/cooperationPage/Cooperation';
 import { db } from './config/firebase';
-import { getDocs, collection, orderBy, query } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query, limit } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 import ContactLinks from './components/common/contactLinks/ContactLinks';
 import { NotFound } from './components/common/notFound/NotFound';
+
+
 function App() {
   const [catalogItems, setCatalogItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState('');
   const [filteredCategory, setFilteredCategory] = useState([]);
   const [activeSort, setActiveSort] = useState({
-    name:'популярности',
+    name: 'популярности',
     type: 'rating',
   });
+  const [searchQuary, setSearchQuary] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const clothesCollectionRef = collection(db, 'catalogItems');
 
@@ -42,12 +46,17 @@ function App() {
     console.log(result);
   };
 
-  // add: order by category desc
+  const searchedCatalogItems = catalogItems.filter((item) => {
+    return !!(item.title.toLowerCase().includes(searchQuary.toLowerCase()));
+  });
+
   useEffect(() => {
     setIsLoading(true);
     const getCatalogItems = async () => {
       try {
-        const data = await getDocs(query(clothesCollectionRef, orderBy('category', 'desc')));
+        const data = await getDocs(
+          query(clothesCollectionRef, orderBy('category', 'desc'), limit(3)),
+        );
         const filteredData = data.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
@@ -61,7 +70,7 @@ function App() {
       }
     };
     getCatalogItems();
-  }, []);
+  }, [searchQuary, currentPage]);
 
   return (
     <div className="App">
@@ -74,7 +83,7 @@ function App() {
           path="/catalog"
           element={
             <Catalog
-            activeSort={activeSort}
+              activeSort={activeSort}
               setActiveSort={setActiveSort}
               catalogItems={catalogItems}
               setCatalogItems={setCatalogItems}
@@ -82,6 +91,10 @@ function App() {
               activeCategory={activeCategory}
               setActiveCategory={setActiveCategory}
               filterPizzas={filterPizzas}
+              searchQuary={searchQuary}
+              setSearchQuary={setSearchQuary}
+              searchedCatalogItems={searchedCatalogItems}
+              setCurrentPage={setCurrentPage}
             />
           }
         />

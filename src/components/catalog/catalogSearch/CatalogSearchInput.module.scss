@@ -7,6 +7,14 @@
     width: 25px;
     margin-left: 10px;
   }
+  svg:last-child {
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 0.3;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   .input {
     border: none;
     background-color: inherit;

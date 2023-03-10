@@ -12,14 +12,11 @@ export const CatalogSort = ({ catalogItems, setCatalogItems, setActiveSort, acti
   ];
   const [isVisiblePopup, setIsVisiblePopup] = useState(false);
 
-  // const activeLabel = sortItems.find((item) => item.type === activeSort.type).name;
-
   //!Сортировка каталога
   const onSortCatalog = (type) => {
     setActiveSort(type);
     const sortedCatalog = catalogItems.sort((a, b) => a[type.type].localeCompare(b[type.type]));
     setCatalogItems(sortedCatalog);
-    console.log(sortedCatalog);
   };
   const onSelectSortType = (index) => {
     if (onSortCatalog) {
