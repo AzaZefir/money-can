@@ -61,7 +61,7 @@ function App() {
     const getCatalogItems = async () => {
       try {
         const data = await getDocs(
-          query(clothesCollectionRef, orderBy('category', 'desc'), limit(3)),
+          query(clothesCollectionRef, orderBy('category', 'desc')),
         );
         const filteredData = data.docs.map((doc) => ({
           ...doc.data(),
