@@ -2,7 +2,7 @@
   "name": "money-can",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://AzaZefir.github.io/money-can/",
+  "homepage": "http://AzaZefir.github.io/money-can",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
@@ -21,7 +21,6 @@
     "firebase-tools": "^11.24.0",
     "framer-motion": "^10.2.3",
     "gh-pages": "^5.0.0",
-    "gh-pages-deploy": "^0.5.1",
     "global": "^4.4.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
