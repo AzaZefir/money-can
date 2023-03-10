@@ -1,0 +1,35 @@
+<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_475_69)">
+<circle cx="31" cy="31" r="20" fill="white"/>
+</g>
+<path d="M41.067 18.1167C41.2973 18.259 41.4375 18.5105 41.4375 18.7813V42.2188C41.4375 42.6502 41.0877 43 40.6562 43H35.9688C35.5373 43 35.1875 42.6502 35.1875 42.2188V39.875H33.625V42.2188C33.625 42.6502 33.2752 43 32.8438 43H18.7812C18.3498 43 18 42.6502 18 42.2188V33.625C18 33.2887 18.2152 32.9902 18.5342 32.8838L27.375 29.9369V25.0312C27.375 24.7353 27.5422 24.4648 27.8069 24.3325L40.3069 18.0825C40.5491 17.9614 40.8367 17.9743 41.067 18.1167ZM27.375 31.5839L19.5625 34.1881V41.4375H27.375V31.5839ZM28.9375 41.4375H32.0625V39.0938C32.0625 38.6623 32.4123 38.3125 32.8438 38.3125H35.9688C36.4002 38.3125 36.75 38.6623 36.75 39.0938V41.4375H39.875V20.0453L28.9375 25.5141V41.4375Z" fill="#3C4151"/>
+<path d="M21.125 35.1875H22.6875V36.75H21.125V35.1875Z" fill="#3C4151"/>
+<path d="M24.25 35.1875H25.8125V36.75H24.25V35.1875Z" fill="#3C4151"/>
+<path d="M21.125 38.3125H22.6875V39.875H21.125V38.3125Z" fill="#3C4151"/>
+<path d="M24.25 38.3125H25.8125V39.875H24.25V38.3125Z" fill="#3C4151"/>
+<path d="M30.5 32.0625H32.0625V33.625H30.5V32.0625Z" fill="#3C4151"/>
+<path d="M33.625 32.0625H35.1875V33.625H33.625V32.0625Z" fill="#3C4151"/>
+<path d="M30.5 35.1875H32.0625V36.75H30.5V35.1875Z" fill="#3C4151"/>
+<path d="M33.625 35.1875H35.1875V36.75H33.625V35.1875Z" fill="#3C4151"/>
+<path d="M36.75 32.0625H38.3125V33.625H36.75V32.0625Z" fill="#3C4151"/>
+<path d="M36.75 35.1875H38.3125V36.75H36.75V35.1875Z" fill="#3C4151"/>
+<path d="M30.5 28.9375H32.0625V30.5H30.5V28.9375Z" fill="#3C4151"/>
+<path d="M33.625 28.9375H35.1875V30.5H33.625V28.9375Z" fill="#3C4151"/>
+<path d="M36.75 28.9375H38.3125V30.5H36.75V28.9375Z" fill="#3C4151"/>
+<path d="M30.5 25.8125H32.0625V27.375H30.5V25.8125Z" fill="#3C4151"/>
+<path d="M33.625 25.8125H35.1875V27.375H33.625V25.8125Z" fill="#3C4151"/>
+<path d="M36.75 25.8125H38.3125V27.375H36.75V25.8125Z" fill="#3C4151"/>
+<path d="M36.75 22.6875H38.3125V24.25H36.75V22.6875Z" fill="#3C4151"/>
+<defs>
+<filter id="filter0_d_475_69" x="0" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="5.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_475_69"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_475_69" result="shape"/>
+</filter>
+</defs>
+</svg>
