@@ -41,7 +41,7 @@ export const NewCollection = () => {
     ],
   };
   return (
-    <div className="new-collection container">
+    <div id='newCollection' className="new-collection container">
       <h2>Новая коллекция</h2>
       <Slider className="slider" {...settings}>
         <div>

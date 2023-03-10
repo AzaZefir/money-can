@@ -12,7 +12,7 @@ export const About = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className="about-block-bg">
+    <div className="about-block-bg" id='about'>
       <Slider className="slider" {...settings}>
         <div>
           <img className='w-30' src={aboutSliderImg} alt="" />
