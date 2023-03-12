@@ -12,7 +12,7 @@ import { ShoppingCart } from './components/shoppingCart/ShoppingCart';
 import { ProductionPage } from './components/productionPage/ProductionPage';
 import { Cooperation } from './components/cooperationPage/Cooperation';
 import { db } from './config/firebase';
-import { getDocs, collection, orderBy, query, limit } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { FulfillmentPage } from './components/fulfilmentPage/FulfillmentPage';
 import ContactLinks from './components/common/contactLinks/ContactLinks';

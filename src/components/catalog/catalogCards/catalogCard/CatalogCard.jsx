@@ -3,11 +3,12 @@ import { Button } from './../../../common/button/Button';
 import addBtnSvg from './../../../../assets/images/catalogImg/cart-plus 1.svg';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from './../../../../config/firebase';
+import { useToast } from '@chakra-ui/react';
 
 export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
+  const toast = useToast();
   const [activeColors, setActiveColors] = useState(0);
   const [activeSizes, setActiveSizes] = useState(0);
-  
   const cartEl = {
     id,
     image,
@@ -21,6 +22,13 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
     try {
       const cartRef = collection(db, 'cartItems');
       await addDoc(cartRef, cartEl);
+      toast({
+        title: 'Товар добавлен в корзину!',
+        status: 'success',
+        isClosable: true,
+        position: 'top-right',
+        duration: 3000,
+      });
     } catch (err) {
       console.log(err);
     }
