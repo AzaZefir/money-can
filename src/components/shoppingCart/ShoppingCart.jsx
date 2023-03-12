@@ -87,23 +87,23 @@ export const ShoppingCart = () => {
                     <strong>Цвет:</strong>
                     {el.name.name}
                   </p>
-                  <p>{/* <strong>Ткань:</strong>{el.textile} */}</p>
+                  <p><strong>Ткань:</strong>{el.textile}</p>
                   <p>
                     <strong>Размер:</strong>
-                    {el.size}
+                    {el.sizes}
                   </p>
                 </div>
               </div>
               <div className="shopping-cart__items_count">
                 <img src={plusSvg} alt="добавить один товар" title="добавить один товар" />
                 <span>
-                  <strong>{el.price}</strong>
+                  <strong>{el.quantity}</strong>
                 </span>
                 <img src={minusSvg} alt="удалить один товар" title="удалить один товар" />
               </div>
               <div className="shopping-cart__items_price">
                 <p>
-                  <strong>25000 </strong>&nbsp;руб.
+                  <strong>{el.price}</strong>&nbsp;руб.
                 </p>
                 <img
                   src={trashSvg}

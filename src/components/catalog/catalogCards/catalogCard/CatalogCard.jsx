@@ -5,7 +5,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { db } from './../../../../config/firebase';
 import { useToast } from '@chakra-ui/react';
 
-export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
+export const CatalogCard = ({ id, image, title, price, colors, sizes, quantity, textile }) => {
   const toast = useToast();
 
   const [activeColors, setActiveColors] = useState(0);
@@ -15,8 +15,10 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
     image,
     title,
     price,
+    quantity,
     name: colors[activeColors],
-    size: sizes[activeSizes],
+    sizes,
+    textile,
   };
 
   // *TO add catalog item to cart
@@ -55,10 +57,7 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
         </div>
         <div className="catalog__card__sizes">
           {sizes.map((size, index) => (
-            <span
-              key={index}
-              onClick={() => setActiveSizes(index)}
-              className={activeSizes === index ? 'active' : ''}>
+            <span key={index} onClick={() => setActiveSizes(index)} className="disabled">
               <strong>{size}</strong>
             </span>
           ))}
