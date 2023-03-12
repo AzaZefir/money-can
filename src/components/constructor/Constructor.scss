@@ -5,6 +5,7 @@
     h4 {
       width: 100px;
       font-size: 1rem;
+      margin-bottom: 10px;
     }
     .constructor__deps {
       > div {
@@ -136,6 +137,7 @@
       right: 10px;
     }
     .constructor__slider {
+      width: 26%;
       .slick-list {
         padding: 93px 0px !important;
         height: 425px !important;

@@ -39,7 +39,7 @@ a {
 }
 h2 {
   font-weight: 500;
-  font-size: 35px;
+  font-size: 35px !important;
   line-height: 40px;
   @media screen and (max-width:768){
     text-align: center !important;
