@@ -11,6 +11,9 @@
       }
       a {
         color: #a0a2a9 !important;
+        img {
+          margin-right: 10px;
+        }
       }
       > div {
         display: flex;
@@ -21,11 +24,6 @@
           img {
             margin-right: 20px;
           }
-        }
-      }
-      a {
-        img {
-          margin-right: 10px;
         }
       }
     }
