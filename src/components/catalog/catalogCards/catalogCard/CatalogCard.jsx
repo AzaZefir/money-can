@@ -7,10 +7,11 @@ import { useToast } from '@chakra-ui/react';
 
 export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
   const toast = useToast();
+
   const [activeColors, setActiveColors] = useState(0);
   const [activeSizes, setActiveSizes] = useState(0);
+
   const cartEl = {
-    id,
     image,
     title,
     price,
@@ -18,6 +19,7 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
     size: sizes[activeSizes],
   };
 
+  // *TO add catalog item to cart
   const addToCart = async () => {
     try {
       const cartRef = collection(db, 'cartItems');
@@ -44,7 +46,7 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
         <div className="catalog__card__colors">
           {colors.map((color, index) => (
             <span
-              key={color.title}
+              key={index}
               onClick={() => setActiveColors(index)}
               className={activeColors === index ? 'active' : ''}>
               <img src={color.img} />
@@ -54,7 +56,7 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes }) => {
         <div className="catalog__card__sizes">
           {sizes.map((size, index) => (
             <span
-              key={size.title}
+              key={index}
               onClick={() => setActiveSizes(index)}
               className={activeSizes === index ? 'active' : ''}>
               <strong>{size}</strong>

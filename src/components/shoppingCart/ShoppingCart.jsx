@@ -6,29 +6,51 @@ import minusSvg from './../../assets/images/cart/dash-square 1.svg';
 import trashSvg from './../../assets/images/cart/x-square 1.svg';
 import { ContuctUs } from './../common/callUs/ContuctUs';
 import { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { db } from './../../config/firebase';
+import { useToast } from '@chakra-ui/react';
 
 export const ShoppingCart = () => {
+  const toast = useToast();
   const [cartEmpty, setCartEmpty] = useState([]);
-  const cartCollectionRef = collection(db, 'cartItems');
 
+  // * TO delete cart item 
+  const deleteCartItem = async (id) => {
+    try {
+      const cartCollectionRef = doc(db, 'cartItems', id);
+      await deleteDoc(cartCollectionRef);
+      getCartItems();
+      toast({
+        title: 'Товар удален из корзины!',
+        status: 'success',
+        isClosable: true,
+        position: 'top-right',
+        duration: 3000,
+      });
+    } catch (err) {
+      console.log('error:', err);
+    }
+  };
+
+  // *TO get cart data from db
+  const getCartItems = async () => {
+    try {
+      const cartCollectionRef = collection(db, 'cartItems');
+      const data = await getDocs(cartCollectionRef);
+      const cartData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setCartEmpty(cartData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
   useEffect(() => {
-    const getCartItems = async () => {
-      try {
-        const data = await getDocs(cartCollectionRef);
-        const filteredData = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setCartEmpty(filteredData);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     getCartItems();
   }, []);
-  
+
   return (
     <section className="shopping-cart">
       <div className="container">
@@ -83,115 +105,15 @@ export const ShoppingCart = () => {
                 <p>
                   <strong>25000 </strong>&nbsp;руб.
                 </p>
-                <img src={trashSvg} alt="удалить товар" title="удалить товар" />
+                <img
+                  src={trashSvg}
+                  onClick={() => deleteCartItem(el.id)}
+                  alt="удалить товар"
+                  title="удалить товар"
+                />
               </div>
             </section>
           ))}
-          {/* <section className="shopping-cart__item">
-            <div>
-              <figure>
-                <img src={cartItemSvg} alt="картинка товара" title="картинка товара" />
-              </figure>
-              <div className="shopping-cart__items_item">
-                <p>Футболка USA</p>
-                <p>
-                  <strong>Доп-но:</strong>лейбл. зип пакеты
-                </p>
-                <p>
-                  <strong>Цвет:</strong>Черный
-                </p>
-                <p>
-                  <strong>Ткань:</strong>Полиэстер
-                </p>
-                <p>
-                  <strong>Размер:</strong>S
-                </p>
-              </div>
-            </div>
-            <div className="shopping-cart__items_count">
-              <img src={plusSvg} alt="добавить один товар" title="добавить один товар" />
-              <span>
-                <strong>300</strong>
-              </span>
-              <img src={minusSvg} alt="удалить один товар" title="удалить один товар" />
-            </div>
-            <div className="shopping-cart__items_price">
-              <p>
-                <strong>25000 </strong> руб.
-              </p>
-              <img src={trashSvg} alt="удалить товар" title="удалить товар" />
-            </div>
-          </section>
-          <section className="shopping-cart__item">
-            <div>
-              <figure>
-                <img src={cartItemSvg} alt="картинка товара" title="картинка товара" />
-              </figure>
-              <div className="shopping-cart__items_item">
-                <p>Футболка USA</p>
-                <p>
-                  <strong>Доп-но:</strong>лейбл. зип пакеты
-                </p>
-                <p>
-                  <strong>Цвет:</strong>Черный
-                </p>
-                <p>
-                  <strong>Ткань:</strong>Полиэстер
-                </p>
-                <p>
-                  <strong>Размер:</strong>S
-                </p>
-              </div>
-            </div>
-            <div className="shopping-cart__items_count">
-              <img src={plusSvg} alt="добавить один товар" title="добавить один товар" />
-              <span>
-                <strong>300</strong>
-              </span>
-              <img src={minusSvg} alt="удалить один товар" title="удалить один товар" />
-            </div>
-            <div className="shopping-cart__items_price">
-              <p>
-                <strong>25000 </strong> руб.
-              </p>
-              <img src={trashSvg} alt="удалить товар" title="удалить товар" />
-            </div>
-          </section>
-          <section className="shopping-cart__item">
-            <div>
-              <figure>
-                <img src={cartItemSvg} alt="картинка товара" title="картинка товара" />
-              </figure>
-              <div className="shopping-cart__items_item">
-                <p>Футболка USA</p>
-                <p>
-                  <strong>Доп-но:</strong>лейбл. зип пакеты
-                </p>
-                <p>
-                  <strong>Цвет:</strong>Черный
-                </p>
-                <p>
-                  <strong>Ткань:</strong>Полиэстер
-                </p>
-                <p>
-                  <strong>Размер:</strong>S
-                </p>
-              </div>
-            </div>
-            <div className="shopping-cart__items_count">
-              <img src={plusSvg} alt="добавить один товар" title="добавить один товар" />
-              <span>
-                <strong>300</strong>
-              </span>
-              <img src={minusSvg} alt="удалить один товар" title="удалить один товар" />
-            </div>
-            <div className="shopping-cart__items_price">
-              <p>
-                <strong>25000 </strong> руб.
-              </p>
-              <img src={trashSvg} alt="удалить товар" title="удалить товар" />
-            </div>
-          </section> */}
         </section>
         <section className="shopping-cart__payment">
           <p>
