@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   cartItems: [],
-  totalAmount: 0,
-  totalQuantity: 0,
+  totalPrice: 0,
 };
 
 const cartSlice = createSlice({
@@ -11,41 +10,25 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action) => {
-      const newItem = action.payload;
-      const existingItem = state.cartItems.find(
-        (item) => item.id === newItem.id
-        );
-
-      state.totalQuantity++;
-
-      if (!existingItem) {
-        state.cartItems.push({
-          id:newItem.id,
-          title: newItem.title,
-          image: newItem.image,
-          price: newItem.price,
-          quantity: 4,
-          totalPrice: newItem.price,
-          textile: newItem.textile,
-          sizes: newItem.sizes,
-
-        });
+      const findItems = state.cartItems.find((item) => item.id === action.payload.id);
+      if (findItems) {
+        findItems.count++;
       } else {
-        existingItem.quantity++;
-        existingItem.totalPrice = Number(existingItem.totalPrice) + Number(newItem.price);
+        state.cartItems.push({ ...action.payload, count: 1 });
       }
-
-      state.totalAmount = state.cartItems.reduce(
-        (total, item) => total + Number(item.price) * item.quantity,
-      );
-
-      console.log(state.totalQuantity)
-      console.log(state.cartItems)
-      console.log(newItem)
+      state.totalPrice = state.cartItems.reduce((sum, obj) => {
+        return obj.price + sum;
+      }, 0);
+    },
+    removeItem: (state, action) => {
+      state.cartItems.filter((obj) => obj.id !== action.payload);
+    },
+    clearItems: (state, action) => {
+      state.cartItems = [];
     },
   },
 });
 
-export const cartActions = cartSlice.actions;
+export const { addItem, removeItem, clearItems } = cartSlice.actions;
 
 export default cartSlice.reducer;

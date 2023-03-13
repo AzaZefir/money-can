@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './../../../common/button/Button';
 import addBtnSvg from './../../../../assets/images/catalogImg/cart-plus 1.svg';
-import { addDoc, collection } from 'firebase/firestore';
+import { collection, doc, getDoc, setDoc, updateDoc, increment } from 'firebase/firestore';
 import { db } from './../../../../config/firebase';
 import { useToast } from '@chakra-ui/react';
 
@@ -11,21 +11,38 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes, quantity, 
   const [activeColors, setActiveColors] = useState(0);
   const [activeSizes, setActiveSizes] = useState(0);
 
-  const cartEl = {
-    image,
-    title,
-    price,
-    quantity,
-    name: colors[activeColors],
-    sizes,
-    textile,
-  };
-
   // *TO add catalog item to cart
+
+  const cartRef = collection(db, 'cartItems');
+
   const addToCart = async () => {
+    const cartEl = {
+      id,
+      image,
+      title,
+      price,
+      quantity,
+      name: colors[activeColors],
+      sizes,
+      textile,
+    };
     try {
-      const cartRef = collection(db, 'cartItems');
-      await addDoc(cartRef, cartEl);
+      const docRef = doc(cartRef, cartEl.id);
+      const docSnapshot = await getDoc(docRef);
+
+      if (docSnapshot.exists()) {
+        // Item exists, increment count
+        await updateDoc(docRef, {
+          count: increment(1),
+        });
+      } else {
+        // Item doesn't exist, add a new item
+        await setDoc(docRef, {
+          ...cartEl,
+          count: 1,
+        });
+      }
+
       toast({
         title: 'Товар добавлен в корзину!',
         status: 'success',
@@ -34,7 +51,7 @@ export const CatalogCard = ({ id, image, title, price, colors, sizes, quantity, 
         duration: 3000,
       });
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   };
 

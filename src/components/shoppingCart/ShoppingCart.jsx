@@ -6,15 +6,66 @@ import minusSvg from './../../assets/images/cart/dash-square 1.svg';
 import trashSvg from './../../assets/images/cart/x-square 1.svg';
 import { ContuctUs } from './../common/callUs/ContuctUs';
 import { useEffect, useState } from 'react';
-import { collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
+import {
+  collection,
+  deleteDoc,
+  doc,
+  updateDoc,
+  getDoc,
+  getDocs,
+  increment,
+} from 'firebase/firestore';
 import { db } from './../../config/firebase';
 import { useToast } from '@chakra-ui/react';
+import { useSelector } from 'react-redux';
 
 export const ShoppingCart = () => {
   const toast = useToast();
-  const [cartEmpty, setCartEmpty] = useState([]);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const [cartEmpty, setCartEmpty] = useState(cartItems);
+  // const [item, setItem] = useState(null);
+  // const [totalPrice, setTotalPrice] = useState(0);
 
-  // * TO delete cart item 
+  // useEffect(() => {
+  //   const fetchItem = async (id) => {
+  //     const itemRef = doc(db, "cartItems", id);
+  //     const itemSnap = await getDoc(itemRef);
+  //     const itemData = itemSnap.data();
+  //     setItem(itemData);
+  //     setTotalPrice(itemData.price * itemData.count);
+  //   };
+  //   fetchItem();
+  // }, []);
+
+  // const onMinusItem = async (id) => {
+  //   const cartItemRef = doc(db, "cartItems", id);
+  //   const decrement = -1;
+  //   const count = docSnap.data().count;
+  //   const price = docSnap.data().price;
+  //   const newCount = count + decrement;
+  //   const newPrice = price * newCount;
+  //   setTotalPrice(newPrice);
+  //   await updateDoc(cartItemRef, {
+  //     count: newCount,
+  //     price: newPrice
+  //   });
+  // };
+
+  // const onPlusItem = async (id) => {
+  //   const cartItemRef = doc(db, "cartItems", id);
+  //   const increment = 1;
+  //   const count = docSnap.data().count;
+  //   const price = docSnap.data().price;
+  //   const newCount = count + increment;
+  //   const newPrice = price * newCount;
+  //   setTotalPrice(newPrice);
+  //   await updateDoc(cartItemRef, {
+  //     count: newCount,
+  //     price: newPrice
+  //   });
+  // };
+
+  // * TO delete cart item
   const deleteCartItem = async (id) => {
     try {
       const cartCollectionRef = doc(db, 'cartItems', id);
@@ -31,7 +82,48 @@ export const ShoppingCart = () => {
       console.log('error:', err);
     }
   };
-
+  // *TO minus item cart data from db
+  const onMinusItem = async(id) => {
+    try {
+      const cartItemRef = doc(db, 'cartItems', id);
+      const decrement = increment(-1);
+      await updateDoc(cartItemRef, {
+        count: decrement
+      });
+      const docSnap = await getDoc(cartItemRef);
+      const count = docSnap.data().count;
+      if (count === 0) {
+        await deleteDoc(cartItemRef);
+        console.log("Item deleted successfully!");
+      } else {
+        console.log("Item decremented successfully!");
+      }
+      getCartItems();
+    } catch (error) {
+      console.error("Error decrementing item: ", error);
+    }
+  }
+  // *TO plus item cart data from db
+  const onPlusItem = async(id) => {
+    try {
+      const cartItemRef = doc(db, 'cartItems', id);
+      const decrement = increment(1);
+      await updateDoc(cartItemRef, {
+        count: decrement
+      });
+      const docSnap = await getDoc(cartItemRef);
+      const count = docSnap.data().count;
+      if (count === 0) {
+        await deleteDoc(cartItemRef);
+        console.log("Item deleted successfully!");
+      } else {
+        console.log("Item incremented successfully!");
+      }
+      getCartItems();
+    } catch (error) {
+      console.error("Error incremented item: ", error);
+    }
+  }
   // *TO get cart data from db
   const getCartItems = async () => {
     try {
@@ -46,7 +138,7 @@ export const ShoppingCart = () => {
       console.log(err);
     }
   };
-  
+
   useEffect(() => {
     getCartItems();
   }, []);
@@ -87,7 +179,10 @@ export const ShoppingCart = () => {
                     <strong>Цвет:</strong>
                     {el.name.name}
                   </p>
-                  <p><strong>Ткань:</strong>{el.textile}</p>
+                  <p>
+                    <strong>Ткань:</strong>
+                    {el.textile}
+                  </p>
                   <p>
                     <strong>Размер:</strong>
                     {el.sizes}
@@ -95,11 +190,21 @@ export const ShoppingCart = () => {
                 </div>
               </div>
               <div className="shopping-cart__items_count">
-                <img src={plusSvg} alt="добавить один товар" title="добавить один товар" />
+                <img
+                  onClick={() => onPlusItem(el.id)}
+                  src={plusSvg}
+                  alt="добавить один товар"
+                  title="добавить один товар"
+                />
                 <span>
-                  <strong>{el.quantity}</strong>
+                  <strong>{el.count}</strong>
                 </span>
-                <img src={minusSvg} alt="удалить один товар" title="удалить один товар" />
+                <img
+                  onClick={() => onMinusItem(el.id)}
+                  src={minusSvg}
+                  alt="удалить один товар"
+                  title="удалить один товар"
+                />
               </div>
               <div className="shopping-cart__items_price">
                 <p>
@@ -120,7 +225,7 @@ export const ShoppingCart = () => {
             Всего: <strong>1500</strong> шт.
           </p>
           <p>
-            Сумма заказа: <strong>125000</strong> руб.
+            Сумма заказа: <strong>1500</strong> руб.
           </p>
           <Button>Оплатить сейчас</Button>
           <Button>Вернуться назад</Button>
